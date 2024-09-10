@@ -1,11 +1,11 @@
 #  RNAseq en *Phaseolus vulgaris* 
 ---
 
-## Uso
+## Uso 
 
 Se puede usar este repositorio para obtener datos que ayuden a comprender mejor el transcriptoma de *Phaseolus vulgaris* en condiciones de hipoxia
 
-Con el fin de comprender mejor los mecanismos que regulan la respuesta a la hipoxia, resulta crucial llevar a cabo un análisis e integración de los datos transcriptómicos obtenidos mediante RNA-Seq a nivel de célula única en condiciones de hipoxia.
+Con el fin de comprender mejor los mecanismos que regulan la respuesta a la hipoxia, resulta crucial llevar a cabo un análisis e integración de los datos transcriptómicos obtenidos mediante RNA-Seq a nivel de célula única en condiciones de hipoxia. :
 
 ## Instalacion 
 Se puede instalar el paquete desde el repositorio de codigo fuente clonando el repositorio en la maquina local:
