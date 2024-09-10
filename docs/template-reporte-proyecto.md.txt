@@ -3,7 +3,7 @@
 Nombre: <!-- Daniel Bautista (<danielzb@lcg.unam.mx>)  -->  
 Nombre: <!-- Nombre X (<email>)  -->
 
-Fecha:  dd/mm/aaaa
+Fecha:  10/09/2024
 
 
 ## Introducción
@@ -18,7 +18,7 @@ Fecha:  dd/mm/aaaa
 
 ## Metodología
 
-<!-- [Identificar y describir los diferentes datos de entrada con los que se cuenta, así como de dónde fueron descargados, el formato de los mismos, y las columnas con las que cuenta. Especificar si se utilizará un servidor en particular para trabajar, o herramientas para el desarrollo de la solución del análsis. Formular las preguntas biológicas que se busca resolver con el análisis de los datos para determinar las tareas a realizar por cada una de ellas.]
+Se descargo los datos, despues le hice asi y despues asa y asi quedaron
 
 
 ### A. Servidor y software
