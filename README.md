@@ -5,7 +5,7 @@
 
 Se puede usar este repositorio para obtener datos que ayuden a comprender mejor el transcriptoma de *Phaseolus vulgaris* en condiciones de hipoxia
 
-Con la finalidad de puntualizar en los mecanismos que orquestan la respuesta a hipoxia, consideramos fundamental el análisis e integración de datos del paisaje transcripcional de RNA-Seq a nivel de célula única y bajo condiciones de hipoxia. Uno de nuestros objetivos consistirá en realizar un repositorio de datos transcripcionales realizados a nivel de célula única en tejidos con diversos nichos hipóxicos, por ejemplo, el nódulo de algunas especies modelo de plantas leguminosas como G. max , M. truncatula y L. japonicus.
+Con el fin de comprender mejor los mecanismos que regulan la respuesta a la hipoxia, resulta crucial llevar a cabo un análisis e integración de los datos transcriptómicos obtenidos mediante RNA-Seq a nivel de célula única en condiciones de hipoxia.
 
 ## Instalacion 
 Se puede instalar el paquete desde el repositorio de codigo fuente clonando el repositorio en la maquina local:
@@ -45,4 +45,4 @@ El código fuente está disponible en este repositorio. Se acoge con satisfacci�
 
 ## Contacto 
 
-Si tiene problemas o preguntas, por favor abra un problema en este repositorio o pongase en contacto con nosotros en email: danielzb@lcg.unam.mx y melissap@lcg.unam.mx
+Si tiene problemas o preguntas de este repositorio pongase en contacto con nosotros en email: danielzb@lcg.unam.mx y melissap@lcg.unam.mx
