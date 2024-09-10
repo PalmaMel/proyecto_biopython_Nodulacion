@@ -45,4 +45,4 @@ El código fuente está disponible en este repositorio. Se acoge con satisfacci�
 
 ## Contacto 
 
-danielzb@lcg.unam.mx
+Si tiene problemas o preguntas, por favor abra un problema en este repositorio o pongase en contacto con nosotros en email: danielzb@lcg.unam.mx y melissap@lcg.unam.mx
