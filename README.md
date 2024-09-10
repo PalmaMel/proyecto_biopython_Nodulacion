@@ -45,3 +45,4 @@ El código fuente está disponible en este repositorio. Se acoge con satisfacci�
 
 ## Contacto 
 
+danielzb@lcg.unam.mx
