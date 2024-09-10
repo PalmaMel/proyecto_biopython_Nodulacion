@@ -1,7 +1,7 @@
 # Nodulacion en *Phaseolus vulgaris*
 
-Nombre: <!-- Daniel Bautista (<danielzb@lcg.unam.mx>)  -->  
-Nombre: <!-- Nombre X (<email>)  -->
+Nombre: <!-- Daniel Bautista (<danielzb@lcg.unam.mx>)  
+Nombre: <!-- Palma Meliss X (<melissap@lcg.unam.mx>) 
 
 Fecha:  10/09/2024
 
@@ -10,16 +10,16 @@ Fecha:  10/09/2024
 
 <!-- [Describir los antecedentes que ayuden a comprender el proyecto a desarrollar, o bien el análisis que se requiere llevar a cabo, incluyendo términos o definiciones, e imágenes relacionados a este. Esta sección, permite el usuario tener la noción del tema que se va a bordar en el resto del documento. -->
 
-
 ## Planteamiento del problema
 
 <!-- Describir la problemática que se presenta, la situación que motiva la realización del proyecto/análisis y que está causando posibles inconvenientes. -->
-
+aqui van las preguntas 
 
 ## Metodología
 
-Se descargo los datos, despues le hice asi y despues asa y asi quedaron
+Se descargo los datos de ...
 
+aqui va la solucion,
 
 ### A. Servidor y software
 
@@ -33,15 +33,23 @@ Se descargo los datos, despues le hice asi y despues asa y asi quedaron
 
 Entendiendo los archivos de datos 
 
-Los datos de entrada fueron descargados desde NCBI y se encuentran en RUTA DE LA CARPETA.
+Los datos de entrada fueron compilados de multiples repositorios publicos, consisten en rRNAseq de diferentes tejidos-estadios del desarrollo de phaseolus vulgaris y se encuentran en ./data
+
+Consiste de una tabla con los siguientes encabezados:
+    - ID: El identificador del gen o transcrito analizado.
+    - baseMean: Promedio de las lecturas normalizadas entre todas las réplicas para un gen específico. Sirve como una medida general de la expresión del gen.
+    - log2FoldChange: Cambio en la expresión del gen entre dos condiciones comparadas (por ejemplo, hipoxia vs. control), expresado en logaritmo base 2. Valores positivos indican sobreexpresión en la condición experimental, mientras que valores negativos sugieren represión.
+    - lfcSE: Error estándar del log2FoldChange, que indica la incertidumbre en la estimación del cambio en la expresión.
+    - stat: Valor estadístico asociado con la prueba diferencial, como un valor de t o z que representa la magnitud del cambio en relación con su error estándar.
+    - pvalue: Valor p que indica la significancia estadística del cambio en la expresión génica. Un valor bajo sugiere que el cambio observado es poco probable que ocurra por azar.
+    - padj: Valor p ajustado para múltiples pruebas mediante un método como Benjamini-Hochberg, que controla la tasa de falsos positivos (FDR).
+    - Nod1_CE3_1, Nod1_CE3_2, Nod7_ControlNod_1, Nod7_ControlNod_2, Nod7_ControlNod_3: Valores crudos de expresión para las réplicas biológicas bajo diferentes condiciones experimentales (hipoxia o control, por ejemplo).
+    - Nod1_CE3_1_normalized, Nod1_CE3_2_normalized, Nod7_ControlNod_1_normalized, Nod7_ControlNod_2_normalized, Nod7_ControlNod_3_normalized: Lecturas normalizadas, ajustadas para eliminar la variación técnica entre muestras.
+    -Expression: Categoría que puede indicar si el gen está "upregulated", "downregulated", o sin cambios significativos en su expresión entre las condiciones.
 
 ```
 |-- data
-|   |-- coli_genomic.fna
-|   |-- coli.gff
-|   |-- coli_protein.fna
-|   |-- directorio.txt
-|   `-- flagella_genes.txt
+|   |-- Complete_repositorio_de_RNAseq.xlsx
 ```
 -->
 
@@ -160,7 +168,7 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 ## Análisis y Conclusiones
 
- <!-- Describir todo lo que descubriste en este análisis -->
+ <!-- Describir todo lo que descubriste en este análisis --> 
 
 
 ## Referencias
