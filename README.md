@@ -11,7 +11,7 @@ Con el fin de comprender mejor los mecanismos que regulan la respuesta a la hipo
 Se puede instalar el paquete desde el repositorio de codigo fuente clonando el repositorio en la maquina local:
 
 '''
-git clone https://github.com/ArmandoTrapaga/Proyecto_Biopython_Armando_Melissa
+git clone https://github.com/PalmaMel/proyecto_biopython
 # Cambia al directorio del repositorio clonado:
 cd repositorio
 # Instala el paquete utilizando pip:
