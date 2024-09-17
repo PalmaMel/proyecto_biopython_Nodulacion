@@ -15,9 +15,11 @@ Fecha:  10/09/2024
   en el resto del documento. -->
 
 
-El frijol común (*Phaseolus vulgaris*) es cultivado en todo el mundo y representa aproximadamente 
-el 50% de las leguminosas de grano consumidas globalmente,especialmente en América Latina y África;
-representando una fuente importante de proteínas dietéticas (entre el 20% y el 25%) , micronutrientes y calorías.
+El frijol común (*Phaseolus vulgaris*) es una de las leguminosas más importantes a nivel mundial, representando 
+alrededor del 50% del consumo global de leguminosas de grano. Su importancia es particularmente notable en América
+Latina y África, donde constituye un componente esencial de las dietas tradicionales. Además de ser una fuente valiosa
+de proteínas dietéticas, con un contenido que oscila entre el 20% y el 25%, el frijol común también es rico en 
+micronutrientes y calorías, lo que lo convierte en un alimento fundamental para millones de personas.
 
 ## Planteamiento del problema
 
