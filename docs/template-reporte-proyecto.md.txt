@@ -19,11 +19,11 @@ El frijol común (*Phaseolus vulgaris*) es una de las leguminosas más important
 alrededor del 50% del consumo global de leguminosas de grano. Su importancia es particularmente notable en América
 Latina y África, donde constituye un componente esencial de las dietas tradicionales. Además de ser una fuente valiosa
 de proteínas dietéticas, con un contenido que oscila entre el 20% y el 25%, el frijol común también es rico en 
-micronutrientes y calorías, lo que lo convierte en un alimento fundamental para millones de personas.
+micronutrientes y calorías, lo que lo convierte en un alimento fundamental para millones de personas. 
 
-Aprovechando los recursos genómicos recientemente desarrollados para *Phaseolus vulgaris* y utilizando la tecnología de RNA-Seq,
-medimos los patrones de expresión génica en 24 muestras recolectadas de siete tejidos en etapas clave del desarrollo y bajo tres
- tratamientos con nitrógeno. Se analizaron los patrones de expresión génica en toda la planta para comprender mejor los cambios
+Aprovechando los recursos genómicos recientemente desarrollados y utilizando la tecnología de RNA-Seq,
+se midieron los patrones de expresión génica en 24 muestras recolectadas de siete tejidos en etapas clave del desarrollo y bajo tres
+tratamientos con nitrógeno. Se analizaron los patrones de expresión génica en toda la planta para comprender mejor los cambios
 relacionados con la nodulación, el desarrollo de semillas y el uso de nitrógeno.
 
 ## Planteamiento del problema
