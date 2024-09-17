@@ -44,7 +44,8 @@ aqui va la solucion,
 
 Entendiendo los archivos de datos 
 
-Los datos de entrada fueron compilados de multiples repositorios publicos, consisten en rRNAseq de diferentes tejidos-estadios del desarrollo de phaseolus vulgaris y se encuentran en ./data
+Los datos de entrada fueron compilados de un 
+, consisten en rRNAseq de diferentes tejidos-estadios del desarrollo de phaseolus vulgaris y se encuentran en ./data
 
 Consiste de una tabla con los siguientes encabezados:
     - ID: El identificador del gen o transcrito analizado.
