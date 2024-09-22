@@ -1,39 +1,49 @@
 # Nodulacion en *Phaseolus vulgaris*
 
 Nombre: <!-- Daniel Bautista (<danielzb@lcg.unam.mx>)  
-Nombre: <!-- Palma Meliss X (<melissap@lcg.unam.mx>) 
+Nombre: <!-- Palma Melissa (<melissap@lcg.unam.mx>) 
 
 Fecha:  10/09/2024
 
 
 ## Introducción
 
-<!-- [Describir los antecedentes que ayuden a
- comprender el proyecto a desarrollar, o bien el análisis que se requiere 
- llevar a cabo, incluyendo términos o definiciones, e imágenes relacionados a este. 
- Esta sección, permite el usuario tener la noción del tema que se va a bordar
-  en el resto del documento. -->
-
-
 El frijol común (*Phaseolus vulgaris*) es una de las leguminosas más importantes a nivel mundial, representando 
 alrededor del 50% del consumo global de leguminosas de grano. Su importancia es particularmente notable en América
 Latina y África, donde constituye un componente esencial de las dietas tradicionales. Además de ser una fuente valiosa
 de proteínas dietéticas, con un contenido que oscila entre el 20% y el 25%, el frijol común también es rico en 
-micronutrientes y calorías, lo que lo convierte en un alimento fundamental para millones de personas.
+micronutrientes y calorías, lo que lo convierte en un alimento fundamental para millones de personas. 
 
-Aprovechando los recursos genómicos recientemente desarrollados para *Phaseolus vulgaris* y utilizando la tecnología de RNA-Seq,
-medimos los patrones de expresión génica en 24 muestras recolectadas de siete tejidos en etapas clave del desarrollo y bajo tres
- tratamientos con nitrógeno. Se analizaron los patrones de expresión génica en toda la planta para comprender mejor los cambios
-relacionados con la nodulación, el desarrollo de semillas y el uso de nitrógeno.
+Adicionalmete las legumbres son contribuyentes importantes al nitrógeno biológico (N), un nutriente critico  
+para la produccion y crecimiento, este nutriente a pesar de su abundacia atmosferica las plantas solo pueden 
+utilizar formas reducidas de este elemento, como el amonio (NH₄⁺) o los nitratos (NO₃⁻). La fijación de nitrógeno
+atmosférico es posible gracias a la acción de bacterias específicas, algunas de las que fijan nitrógeno de manera 
+simbiótica, asociándose con plantas huéspedes, como las legumbres, que les suministran azúcares provenientes de la
+fotosíntesis como fuente de energía, mientras que los microorganismos proporcionan nitrógeno fijado para el crecimiento
+de la planta.
+
+En el caso de legumbres como *P.vulgaris* estas bacterias colonizan el sistema de raíces de la planta huésped y 
+hacen que las raíces formen nódulos (anaeróbicos) para albergar a las bacterias que empezaron a fijar nitrógeno que la
+planta aprovechara para producir semillas ricas en nitrógeno. Siendo las legumbres no noduladas bajas en nitrógeno y con 
+una producción baja de semillas.
+
+La fijación e nitrógeno desempeña un papel fundamental en el mantenimiento de la salud de los ecosistemas tanto acuáticos como 
+terrestres en todo el planeta, es el estudio de los mecanismos que subyacen a las relaciones simbióticas, la formación de nódulos
+y la fijación de nitrógeno de gran importancia, por ejemplo como una posible alternativa natural para suministrar este nutriente 
+esencial a las plantas en contraste fertilizantes sintéticos cuyo uso excesivo ha generado serios problemas ecológicos a nivel 
+global, como la creación de zonas muertas en áreas costeras. 
 
 ## Planteamiento del problema
 
 <!-- Describir la problemática que se presenta, la situación que motiva la realización del proyecto/análisis y que está causando posibles inconvenientes. -->
-aqui van las preguntas 
+
+**aqui van las preguntas**
 
 ## Metodología
 
-Se descargo los datos de ...
+Se descargaron los datos del repositorio *Phaseolus vulgaris* gene expression atlas (PvGEA) disponible en: (<https://www.zhaolab.org/PvGEA/>)
+y publicado en el articulo:
+O’Rourke, J.A., Iniguez, L.P., Fu, F. et al. An RNA-Seq based gene expression atlas of the common bean. BMC Genomics 15, 866 (2014). https://doi.org/10.1186/1471-2164-15-866
 
 aqui va la solucion,
 
@@ -49,8 +59,8 @@ aqui va la solucion,
 
 Entendiendo los archivos de datos 
 
-Los datos de entrada fueron compilados de un 
-, consisten en rRNAseq de diferentes tejidos-estadios del desarrollo de phaseolus vulgaris y se encuentran en ./data
+Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa; raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
+
 
 Consiste de una tabla con los siguientes encabezados:
     - ID: El identificador del gen o transcrito analizado.
