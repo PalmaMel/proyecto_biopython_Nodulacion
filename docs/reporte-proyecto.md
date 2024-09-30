@@ -100,7 +100,13 @@ Formato:
     stat: Estadístico usado en la prueba de hipótesis para la diferencia en la expresión del gen.
     pvalue: Valor p de la prueba de hipótesis, que indica la significancia estadística del cambio en la expresión.
     padj: Valor p ajustado, que corrige los valores p originales para múltiples comparaciones (control de la tasa de falsos positivos).
-    Columnas de muestra (como "Nod1_CE3_1", "Nod7_ControlNod_1"): Datos de expresión cruda para cada muestra.
+    Columnas de muestra (como "Nod1_CE3_1", "Nod7_ControlNod_1"): Datos de expresión cruda para cada muestra. Siendo el número la cantidad de días en el desarrollo. En distintas condiciones:
+        RT: Root tips, 0.5 cm of tissue, collected from fertilized plants at 2nd trifoliate stage of development
+        ST: Shoot tip, including the apical meristem, collected at the 2nd trifoliate stage
+        YR:  Whole roots, including root tips, collected at the 2nd trifoliate stage of development
+        PvRE: Whole roots separated from fix+ nodules collected 21 days after inoculation
+        PvRF: Whole roots from fertilized plants collected at the same time as RE and RI Whole roots separated from fix- nodules collected 21 DAI
+        PvRI: Whole roots separated from fix- nodules collected 21 days after inoculation
     Columnas "normalized": Expresión de los genes, pero normalizada para facilitar la comparación entre muestras.
     Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
 
