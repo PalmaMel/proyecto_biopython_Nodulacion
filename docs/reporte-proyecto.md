@@ -55,11 +55,11 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 |-- data
 |   |-- Complete_repositorio_de_RNAseq.xlsx
 ```
--->
+
 
 #### Metadatos de la carpeta de datos
 
-<!-- 
+
 > Versión/Identificador del genoma: Única (1.0) 
 
 > Fecha de descarga: 08/09/2024
@@ -67,13 +67,14 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 >| Archivo | Descripción  | Tipo | 
 |:--      |:--           |:--  |
 | Complete repository Nodulation.xlsx  | Conjunto de datos transcriptomicos de P. vulgaris en distintas condiciones  | Formato xlsx |
--->
+
 
 #### Formato de los archivos
 
-<!-- 
+
 
 - `Complete repository Nodulation.xlsx` : formato xlsx
+
 
 
 ```
@@ -109,7 +110,7 @@ Formato:
 ## Resultados
  
 
-<!-- ### X. Pregunta 
+### X. Pregunta 
 
 Archivo(s):     
 
@@ -125,7 +126,6 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 ```
 
--->
 
 
 
