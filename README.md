@@ -1,8 +1,7 @@
-#  RNAseq en *Phaseolus vulgaris* 
+#  Paisaje transcripcional de nichos hipoxicos en *Phaseolus vulgaris* 
 ---
 
 ## Uso 
-
 Se puede usar este repositorio para obtener datos que ayuden a comprender mejor el transcriptoma de *Phaseolus vulgaris* en condiciones de hipoxia
 
 Con el fin de comprender mejor los mecanismos que regulan la respuesta a la hipoxia, resulta crucial llevar a cabo un análisis e integración de los datos transcriptómicos obtenidos mediante RNA-Seq a nivel de célula única en condiciones de hipoxia. :
@@ -14,8 +13,9 @@ Se puede instalar el paquete desde el repositorio de codigo fuente clonando el r
 git clone https://github.com/PalmaMel/proyecto_biopython
 # Cambia al directorio del repositorio clonado:
 cd repositorio
-
-
+'''
+Para verificar que el paquete se haya instalado correctamente, abre una terminal o consola de Python e intenta importar el paquete
+## Salida
 
 ## Control de errores
 
