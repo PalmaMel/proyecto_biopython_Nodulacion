@@ -14,11 +14,8 @@ Se puede instalar el paquete desde el repositorio de codigo fuente clonando el r
 git clone https://github.com/PalmaMel/proyecto_biopython
 # Cambia al directorio del repositorio clonado:
 cd repositorio
-# Instala el paquete utilizando pip:
-pip install 
-'''
-Para verificar que el paquete se haya instalado correctamente, abre una terminal o consola de Python e intenta importar el paquete
-## Salida
+
+
 
 ## Control de errores
 
