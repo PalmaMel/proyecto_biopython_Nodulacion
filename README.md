@@ -13,9 +13,10 @@ Se puede instalar el paquete desde el repositorio de codigo fuente clonando el r
 git clone https://github.com/PalmaMel/proyecto_biopython
 # Cambia al directorio del repositorio clonado:
 cd repositorio
+
 '''
+
 Para verificar que el paquete se haya instalado correctamente, abre una terminal o consola de Python e intenta importar el paquete
-## Salida
 
 ## Control de errores
 
@@ -34,11 +35,15 @@ Se estará trabajando con un compendio de datos publicos compilados por nosotros
 
 ## Metadatos y documentacion
 
+Este README ofrece informacion de uso basico. Para obtener informacion mas detallada sobre el diseño y la implementacion del script, se le invita a consultar la documentacion de los modulos del paquete.
+
 ## Codigo fuente
 
 El código fuente está disponible en este repositorio. Se acoge con satisfacción cualquier contribución o sugerencia a través de solicitudes pull request.
 
 ## Terminos de uso
+
+Este script esta disponible bajo la licencia APACHE. Consulte el archivo LICENSE para obtener mas detalles.
 
 ## Contacto 
 
