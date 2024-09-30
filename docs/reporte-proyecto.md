@@ -77,20 +77,22 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 
 
 
-```
+
 Tabla 1																	
 ID	baseMean | log2FoldChange | lfcSE | stat | pvalue | padj | Nod1_CE3_1 | Nod1_CE3_2 | Nod7_ControlNod_1 | Nod7_ControlNod_2	Nod7_ControlNod_3 | Nod1_CE3_1_normalized | Nod1_CE3_2_normalized | Nod7_ControlNod_1_normalized	Nod7_ControlNod_2_normalized | Nod7_ControlNod_3_normalized | Expression
 Phvul.005G176566.1 | 44782.3494466328 | 11.87766212 | 0.317104344 | 37.45663639 | 4.68390446134868E-307 | 9.7429896700514E-303 | 75 | 26 | 77938 | 24632 | 42324 | 19.29591336 | 20.62183748 | 78073.3064579329 | 53420.7090675681 | 92377.8139568296 | Down_Nod1_CE3_Up_Nod7_ControlNod
 Phvul.005G050500.1 | 14403.3290991897 | 11.53764934 | 0.350822334 | 32.88744251 | 3.32318903771128E-237 | 3.45628275867162E-233	38 | 6 | 25497 | 8869 | 12474 | 9.776596101	| 4.758885572 | 25541.264784289	| 19234.6650178736	| 27226.1802121135 |  Down_Nod1_CE3_Up_Nod7_ControlNod
 Phvul.005G176475.1 | 18825.8705758968 | 9.891831227	| 0.307022284 | 32.21860998	| 9.68608390179848E-228	| 6.71600770804367E-224	125	| 43 | 32632 | 10152 | 18032 | 32.15985559	| 34.1053466 | 32688.6517018048	| 22017.1743445092	| 39357.2616309789 | Down_Nod1_CE3_Up_Nod7_ControlNod
 
-```
+
 
 Formato: 
 
-> a. Contiene un encabezado que la nombra como Tabla 1
+> a. Posee un conjunto de hojas de calculo que estan estructuradas de la siguiente forma:
 
-> b. Después viene una fila que describe las columnas
+> b. Un encabezado que la nombra como Tabla 1
+
+> c. Después viene una fila que describe las columnas
     ID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
     baseMean: La media de las lecturas normalizadas para este gen a través de todas las muestras.
     log2FoldChange: El cambio en la expresión del gen entre las condiciones comparadas, expresado como un cambio logarítmico en base 2. Valores positivos indican una mayor expresión en la condición experimental, y negativos indican menor expresión.
@@ -102,7 +104,7 @@ Formato:
     Columnas "normalized": Expresión de los genes, pero normalizada para facilitar la comparación entre muestras.
     Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
 
-> c. Los valores
+> d. Los valores
 
 
 
