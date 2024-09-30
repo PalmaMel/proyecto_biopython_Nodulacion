@@ -5,7 +5,6 @@ Nombre: <!-- Palma Melissa (<melissap@lcg.unam.mx>)
 
 Fecha:  10/09/2024
 
-
 ## Introducción
 
 El frijol común (*Phaseolus vulgaris*) es una de las leguminosas más importantes a nivel mundial, representando 
@@ -42,10 +41,10 @@ global, como la creación de zonas muertas en áreas costeras.
 ## Metodología
 
 Se descargaron los datos del repositorio *Phaseolus vulgaris* gene expression atlas (PvGEA) disponible en: (<https://www.zhaolab.org/PvGEA/>)
-y publicado en el articulo:
-O’Rourke, J.A., Iniguez, L.P., Fu, F. et al. An RNA-Seq based gene expression atlas of the common bean. BMC Genomics 15, 866 (2014). https://doi.org/10.1186/1471-2164-15-866
+y publicado en el articulo: `An RNA-Seq based gene expression atlas of the common bean`
 
-aqui va la solucion,
+Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa; 
+raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
 
 ### A. Servidor y software
 
@@ -57,22 +56,7 @@ aqui va la solucion,
 
 ### B. Datos de Entrada 
 
-Entendiendo los archivos de datos 
-
-Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa; raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
-
-
-Consiste de una tabla con los siguientes encabezados:
-    - ID: El identificador del gen o transcrito analizado.
-    - baseMean: Promedio de las lecturas normalizadas entre todas las réplicas para un gen específico. Sirve como una medida general de la expresión del gen.
-    - log2FoldChange: Cambio en la expresión del gen entre dos condiciones comparadas (por ejemplo, hipoxia vs. control), expresado en logaritmo base 2. Valores positivos indican sobreexpresión en la condición experimental, mientras que valores negativos sugieren represión.
-    - lfcSE: Error estándar del log2FoldChange, que indica la incertidumbre en la estimación del cambio en la expresión.
-    - stat: Valor estadístico asociado con la prueba diferencial, como un valor de t o z que representa la magnitud del cambio en relación con su error estándar.
-    - pvalue: Valor p que indica la significancia estadística del cambio en la expresión génica. Un valor bajo sugiere que el cambio observado es poco probable que ocurra por azar.
-    - padj: Valor p ajustado para múltiples pruebas mediante un método como Benjamini-Hochberg, que controla la tasa de falsos positivos (FDR).
-    - Nod1_CE3_1, Nod1_CE3_2, Nod7_ControlNod_1, Nod7_ControlNod_2, Nod7_ControlNod_3: Valores crudos de expresión para las réplicas biológicas bajo diferentes condiciones experimentales (hipoxia o control, por ejemplo).
-    - Nod1_CE3_1_normalized, Nod1_CE3_2_normalized, Nod7_ControlNod_1_normalized, Nod7_ControlNod_2_normalized, Nod7_ControlNod_3_normalized: Lecturas normalizadas, ajustadas para eliminar la variación técnica entre muestras.
-    -Expression: Categoría que puede indicar si el gen está "upregulated", "downregulated", o sin cambios significativos en su expresión entre las condiciones.
+Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>) y se encuentran en `proyecto_biopython/data`
 
 ```
 |-- data
@@ -83,11 +67,11 @@ Consiste de una tabla con los siguientes encabezados:
 #### Metadatos de la carpeta de datos
 
 <!-- 
-> Versión/Identificador del genoma:  NC_000913.3
+> Versión/Identificador del genoma:  
 
-> Fecha de descarga: dd/mm/aaaa
+> Fecha de descarga: 08/09/2024
 
->| Archivo | Descripción  | Tipo |
+>| Archivo | Descripción  | Tipo | 
 |:--      |:--           |:--  |
 | coli_genomic.fna  | Secuencia de nucleotidos de E. coli  | Formato FastA |
 | coli.gff.   | Anotación del genoma de E. coli  | Formato gff |
@@ -192,15 +176,12 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 
 
-
 ## Análisis y Conclusiones
 
  <!-- Describir todo lo que descubriste en este análisis --> 
 
 
 ## Referencias
-<!-- Registrar todas las referencias consultadas. Se sugiere formato APA. Ejemplo:
- 
- [1] Frederick R. Blattner et al., The Complete Genome Sequence of <i>Escherichia coli</i> K-12.Science277,1453-1462(1997).DOI:10.1126/science.277.5331.1453
- 
- -->
+ [1] O’Rourke, J.A., Iniguez, L.P., Fu, F. et al. An RNA-Seq based gene expression atlas of the common bean. BMC Genomics 15, 866 (2014). https://doi.org/10.1186/1471-2164-15-866
+ [2] Wagner, S. C.. (2011) Biological Nitrogen Fixation. Nature Education Knowledge 3(10):15
+ [3]
