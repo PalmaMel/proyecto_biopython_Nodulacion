@@ -2,9 +2,8 @@
 ---
 
 ## Uso 
-Se puede usar este repositorio para obtener datos que ayuden a comprender mejor el transcriptoma de *Phaseolus vulgaris* en condiciones de hipoxia
 
-Con el fin de comprender mejor los mecanismos que regulan la respuesta a la hipoxia, resulta crucial llevar a cabo un análisis e integración de los datos transcriptómicos obtenidos mediante RNA-Seq a nivel de célula única en condiciones de hipoxia. :
+Este repositorio puede ser utilizado para obtener datos que faciliten una comprensión más profunda del transcriptoma de Phaseolus vulgaris bajo condiciones de nodulación con Rhizobium tropici y Rhizobium giardini, y sus efectos en el crecimiento, desarrollo y fijación de nitrógeno. Para entender mejor estos mecanismos, es fundamental realizar un análisis detallado e integrar los datos transcriptómicos generados mediante RNA-Seq a nivel de célula única. Esto permitirá revelar patrones específicos de expresión génica y su regulación en respuesta a la nodulación y la fijación simbiótica de nitrógeno.
 
 ## Instalacion 
 Se puede instalar el paquete desde el repositorio de codigo fuente clonando el repositorio en la maquina local:
