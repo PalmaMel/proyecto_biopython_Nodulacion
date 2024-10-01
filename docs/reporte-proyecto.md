@@ -120,9 +120,9 @@ Formato:
 
 -
 ## Resultados
- 
 
-### X. Pregunta 
+
+### A. Analizar comparativamente los genes que se expresan a consecuencia de la infección por R.Tropici y R.Giardini, y sus consecuencias en vías dependientes a Nitrogeno y el crecimiento
 
 Archivo(s):     
 
@@ -138,6 +138,52 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 ```
 
+### B. Analizar la expresión de leghemoglobina en el tallo para discernir su papel en los meristemos apicales
+
+Archivo(s):     
+
+Algoritmo: 
+
+Gráfico
+
+1. 
+
+Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
+
+```bash
+
+```
+
+### C. Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular
+
+Archivo(s):     
+
+Algoritmo: 
+
+Gráfico
+
+1. 
+
+Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
+
+```bash
+
+```
+### D. Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás
+
+Archivo(s):     
+
+Algoritmo: 
+
+Gráfico
+
+1. 
+
+Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
+
+```bash
+
+```
 
 ## Análisis y Conclusiones
 
