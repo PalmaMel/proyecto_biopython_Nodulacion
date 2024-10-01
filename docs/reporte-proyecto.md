@@ -50,7 +50,7 @@ El éxito del frijol como fuente agrícola sostenible depende en gran medida de 
 
 **Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás**
 
-Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efectos negativos de la senescencia inducida, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
+Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efecto del crecimiento atrofiado, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
 
 ## Metodología
 
