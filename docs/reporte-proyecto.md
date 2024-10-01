@@ -124,7 +124,7 @@ Formato:
 
 ### A. Analizar comparativamente los genes que se expresan a consecuencia de la infección por R.Tropici y R.Giardini, y sus consecuencias en vías dependientes a Nitrogeno y el crecimiento
 
-Archivo(s):     
+Archivo(s): Complete repository Nodulation.xlsx Hojas PvRE, PvRF, PvRI, Nod15, Nod21NI, Nod61, Nod7, Nod5, R5,RT
 
 Algoritmo: 
 
@@ -140,7 +140,7 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 ### B. Analizar la expresión de leghemoglobina en el tallo para discernir su papel en los meristemos apicales
 
-Archivo(s):     
+Archivo(s):   Complete repository Nodulation.xlsx Hoja ST
 
 Algoritmo: 
 
@@ -156,7 +156,7 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 ### C. Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular
 
-Archivo(s):     
+Archivo(s):     Complete repository Nodulation.xlsx Todas las hojas
 
 Algoritmo: 
 
@@ -171,7 +171,7 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 ```
 ### D. Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás
 
-Archivo(s):     
+Archivo(s):     Complete repository Nodulation.xlsx Todas las hojas
 
 Algoritmo: 
 
