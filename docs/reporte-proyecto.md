@@ -34,11 +34,11 @@ global, como la creación de zonas muertas en áreas costeras.
 
 ## Planteamiento del problema
 
-El frijol común (Phaseolus vulgaris) es una leguminosa de gran importancia mundial, tanto en términos de consumo humano como por su capacidad de fijar nitrógeno en simbiosis con bacterias como Rhizobium tropici y Rhizobium giardini. La fijación de nitrógeno es crítica para el crecimiento y desarrollo de la planta, ya que le permite obtener nitrógeno atmosférico en lugar de depender exclusivamente de fertilizantes externos. Sin embargo, existen diferencias en la eficiencia de esta fijación de nitrógeno dependiendo de la cepa bacteriana que infecte la planta. Se han observado variaciones significativas en las vías de asimilación de nitrógeno, el crecimiento de la planta y la senescencia celular cuando se comparan las infecciones por R. tropici (efectiva) y R. giardini (inefectiva).
+El frijol común (*Phaseolus vulgaris*) es una leguminosa de gran importancia mundial, tanto en términos de consumo humano como por su capacidad de fijar nitrógeno en simbiosis con bacterias como *Rhizobium tropici* y *Rhizobium giardini*. La fijación de nitrógeno es crítica para el crecimiento y desarrollo de la planta, ya que le permite obtener nitrógeno atmosférico en lugar de depender exclusivamente de fertilizantes externos. Sin embargo, existen diferencias en la eficiencia de esta fijación de nitrógeno dependiendo de la cepa bacteriana que infecte la planta. Se han observado variaciones significativas en las vías de asimilación de nitrógeno, el crecimiento de la planta y la senescencia celular cuando se comparan las infecciones por R. tropici (efectiva) y R. giardini (inefectiva).
 
-Un problema crítico en la mejora de la fijación de nitrógeno y la optimización del crecimiento de las plantas es la falta de un entendimiento profundo sobre cómo diferentes cepas de Rhizobium impactan la expresión génica y, en consecuencia, el metabolismo del nitrógeno y la senescencia celular. Aunque R. tropici es conocido por ser efectivo en la fijación de nitrógeno, la infección con R. giardini provoca envejecimiento prematuro de los tejidos, posiblemente relacionado con la senescencia celular. Esto afecta negativamente el rendimiento de la planta. Además, la función de proteínas como la leghemoglobina, que se ha asociado principalmente a los nódulos, en otras partes de la planta, como los meristemos apicales, sigue sin estar completamente aclarada.
+Un problema crítico en la mejora de la fijación de nitrógeno y la optimización del crecimiento de las plantas es la falta de un entendimiento profundo sobre cómo diferentes cepas de Rhizobium impactan la expresión génica y, en consecuencia, el metabolismo del nitrógeno y la senescencia celular. Aunque *R. tropici* es conocido por ser efectivo en la fijación de nitrógeno, la infección con *R. giardini* provoca envejecimiento prematuro de los tejidos, posiblemente relacionado con la senescencia celular. Esto afecta negativamente el rendimiento de la planta. Además, la función de proteínas como la leghemoglobina, que se ha asociado principalmente a los nódulos, en otras partes de la planta, como los meristemos apicales, sigue sin estar completamente aclarada.
 
-El éxito del frijol como fuente agrícola sostenible depende en gran medida de mejorar la fijación biológica de nitrógeno y gestionar mejor la senescencia inducida por infecciones ineficaces. Al analizar comparativamente la expresión génica en plantas infectadas con R. tropici y R. giardini, es posible identificar los mecanismos moleculares responsables de estas diferencias. Además, al explorar el papel de la leghemoglobina en otras partes de la planta, como los meristemos apicales, y comparando estos datos con especies relacionadas, se podría esclarecer su rol en procesos de crecimiento y desarrollo fuera de los nódulos. También se busca entender cómo el envejecimiento prematuro puede afectar la salud celular y el ciclo de vida de las plantas.
+El éxito del frijol como fuente agrícola sostenible depende en gran medida de mejorar la fijación biológica de nitrógeno y gestionar mejor la senescencia inducida por infecciones ineficaces. Al analizar comparativamente la expresión génica en plantas infectadas con *R. tropici* y *R. giardini*, es posible identificar los mecanismos moleculares responsables de estas diferencias. Además, al explorar el papel de la leghemoglobina en otras partes de la planta, como los meristemos apicales, y comparando estos datos con especies relacionadas, se podría esclarecer su rol en procesos de crecimiento y desarrollo fuera de los nódulos. También se busca entender cómo el envejecimiento prematuro puede afectar la salud celular y el ciclo de vida de las plantas.
 
 ## Objetivos:
 
@@ -51,7 +51,6 @@ El éxito del frijol como fuente agrícola sostenible depende en gran medida de 
 **Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás**
 
 Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efectos negativos de la senescencia inducida, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
-
 
 ## Metodología
 
@@ -71,7 +70,6 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 |   |-- Complete_repositorio_de_RNAseq.xlsx
 ```
 
-
 #### Metadatos de la carpeta de datos
 
 
@@ -83,11 +81,9 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 |:--      |:--           |:--  |
 | Complete repository Nodulation.xlsx  | Conjunto de datos transcriptomicos de P. vulgaris en distintas condiciones  | Formato xlsx |
 
-
 #### Formato de los archivos
 
 - `Complete repository Nodulation.xlsx` : formato xlsx
-
 
 ```
 Tabla 1																	
@@ -100,29 +96,27 @@ Formato:
 
 > a. Posee un conjunto de hojas de calculo que estan estructuradas de la siguiente forma:
 
-> b. Un encabezado que la nombra como Tabla 1
+> b. Un encabezado que la nombra como **Tabla 1**
 
 > c. Después viene una fila que describe las columnas
-    ID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
-    baseMean: La media de las lecturas normalizadas para este gen a través de todas las muestras.
-    log2FoldChange: El cambio en la expresión del gen entre las condiciones comparadas, expresado como un cambio logarítmico en base 2. Valores positivos indican una mayor expresión en la condición experimental, y negativos indican menor expresión.
-    lfcSE: El error estándar del valor de log2FoldChange, que indica la precisión de esta estimación.
-    stat: Estadístico usado en la prueba de hipótesis para la diferencia en la expresión del gen.
-    pvalue: Valor p de la prueba de hipótesis, que indica la significancia estadística del cambio en la expresión.
-    padj: Valor p ajustado, que corrige los valores p originales para múltiples comparaciones (control de la tasa de falsos positivos).
-    Columnas de muestra (como "Nod1_CE3_1", "Nod7_ControlNod_1"): Datos de expresión cruda para cada muestra. Siendo el número la cantidad de días en el desarrollo. En distintas condiciones:
+    - ID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
+    - baseMean: La media de las lecturas normalizadas para este gen a través de todas las muestras.
+    - log2FoldChange: El cambio en la expresión del gen entre las condiciones comparadas, expresado como un cambio logarítmico en base 2. Valores positivos indican una mayor expresión en la condición experimental, y negativos indican menor expresión.
+    - lfcSE: El error estándar del valor de log2FoldChange, que indica la precisión de esta estimación.
+    - stat: Estadístico usado en la prueba de hipótesis para la diferencia en la expresión del gen.
+    - pvalue: Valor p de la prueba de hipótesis, que indica la significancia estadística del cambio en la expresión.
+    - padj: Valor p ajustado, que corrige los valores p originales para múltiples comparaciones (control de la tasa de falsos positivos).
+    - Columnas de muestra (como "Nod1_CE3_1", "Nod7_ControlNod_1"): Datos de expresión cruda para cada muestra. Siendo el número la cantidad de días en el desarrollo. En distintas condiciones:
         RT: Root tips, 0.5 cm of tissue, collected from fertilized plants at 2nd trifoliate stage of development
         ST: Shoot tip, including the apical meristem, collected at the 2nd trifoliate stage
         YR:  Whole roots, including root tips, collected at the 2nd trifoliate stage of development
         PvRE: Whole roots separated from fix+ nodules collected 21 days after inoculation
         PvRF: Whole roots from fertilized plants collected at the same time as RE and RI Whole roots separated from fix- nodules collected 21 DAI
         PvRI: Whole roots separated from fix- nodules collected 21 days after inoculation
-    Columnas "normalized": Expresión de los genes, pero normalizada para facilitar la comparación entre muestras.
-    Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
+    - Columnas "normalized": Expresión de los genes, pero normalizada para facilitar la comparación entre muestras.
+    - Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
 
 > d. Los valores
-
-
 
 -
 ## Resultados
@@ -143,8 +137,6 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 ```bash
 
 ```
-
-
 
 
 ## Análisis y Conclusiones
