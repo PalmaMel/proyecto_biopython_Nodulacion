@@ -34,9 +34,29 @@ global, como la creación de zonas muertas en áreas costeras.
 
 ## Planteamiento del problema
 
-<!-- Describir la problemática que se presenta, la situación que motiva la realización del proyecto/análisis y que está causando posibles inconvenientes. -->
+Situación y contexto
+El frijol común (Phaseolus vulgaris) es una leguminosa de gran importancia mundial, tanto en términos de consumo humano como por su capacidad de fijar nitrógeno en simbiosis con bacterias como Rhizobium tropici y Rhizobium giardini. La fijación de nitrógeno es crítica para el crecimiento y desarrollo de la planta, ya que le permite obtener nitrógeno atmosférico en lugar de depender exclusivamente de fertilizantes externos. Sin embargo, existen diferencias en la eficiencia de esta fijación de nitrógeno dependiendo de la cepa bacteriana que infecte la planta. Se han observado variaciones significativas en las vías de asimilación de nitrógeno, el crecimiento de la planta y la senescencia celular cuando se comparan las infecciones por R. tropici (efectiva) y R. giardini (inefectiva).
 
-**aqui van las preguntas**
+Problema
+Un problema crítico en la mejora de la fijación de nitrógeno y la optimización del crecimiento de las plantas es la falta de un entendimiento profundo sobre cómo diferentes cepas de Rhizobium impactan la expresión génica y, en consecuencia, el metabolismo del nitrógeno y la senescencia celular. Aunque R. tropici es conocido por ser efectivo en la fijación de nitrógeno, la infección con R. giardini provoca envejecimiento prematuro de los tejidos, posiblemente relacionado con la senescencia celular. Esto afecta negativamente el rendimiento de la planta. Además, la función de proteínas como la leghemoglobina, que se ha asociado principalmente a los nódulos, en otras partes de la planta, como los meristemos apicales, sigue sin estar completamente aclarada.
+
+Justificación y motivación
+El éxito del frijol como fuente agrícola sostenible depende en gran medida de mejorar la fijación biológica de nitrógeno y gestionar mejor la senescencia inducida por infecciones ineficaces. Al analizar comparativamente la expresión génica en plantas infectadas con R. tropici y R. giardini, es posible identificar los mecanismos moleculares responsables de estas diferencias. Además, al explorar el papel de la leghemoglobina en otras partes de la planta, como los meristemos apicales, y comparando estos datos con especies relacionadas, se podría esclarecer su rol en procesos de crecimiento y desarrollo fuera de los nódulos. También se busca entender cómo el envejecimiento prematuro puede afectar la salud celular y el ciclo de vida de las plantas.
+
+Objetivo
+El objetivo de este análisis es determinar cómo las infecciones por R. tropici y R. giardini impactan la expresión de genes relacionados con el metabolismo del nitrógeno, el crecimiento y la senescencia celular. Además, se investigará el papel de la leghemoglobina en los tallos, así como la comparación transcriptómica entre diferentes especies para desvelar mecanismos conservados o divergentes.
+
+Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efectos negativos de la senescencia inducida, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
+
+## Objetivos:
+
+**Analizar comparativamente los genes que se expresan a consecuencia de la infección por R.Tropici y R.Giardini, y sus consecuencias en vías dependientes a Nitrogeno y el crecimiento**
+
+**Analizar la expresión de leghemoglobina en el tallo para discernir su papel en los meristemos apicales**
+
+**Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular**
+
+**Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás**
 
 ## Metodología
 
@@ -71,21 +91,16 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 
 #### Formato de los archivos
 
-
-
 - `Complete repository Nodulation.xlsx` : formato xlsx
 
 
-
-
+```
 Tabla 1																	
 ID	baseMean | log2FoldChange | lfcSE | stat | pvalue | padj | Nod1_CE3_1 | Nod1_CE3_2 | Nod7_ControlNod_1 | Nod7_ControlNod_2	Nod7_ControlNod_3 | Nod1_CE3_1_normalized | Nod1_CE3_2_normalized | Nod7_ControlNod_1_normalized	Nod7_ControlNod_2_normalized | Nod7_ControlNod_3_normalized | Expression
 Phvul.005G176566.1 | 44782.3494466328 | 11.87766212 | 0.317104344 | 37.45663639 | 4.68390446134868E-307 | 9.7429896700514E-303 | 75 | 26 | 77938 | 24632 | 42324 | 19.29591336 | 20.62183748 | 78073.3064579329 | 53420.7090675681 | 92377.8139568296 | Down_Nod1_CE3_Up_Nod7_ControlNod
 Phvul.005G050500.1 | 14403.3290991897 | 11.53764934 | 0.350822334 | 32.88744251 | 3.32318903771128E-237 | 3.45628275867162E-233	38 | 6 | 25497 | 8869 | 12474 | 9.776596101	| 4.758885572 | 25541.264784289	| 19234.6650178736	| 27226.1802121135 |  Down_Nod1_CE3_Up_Nod7_ControlNod
 Phvul.005G176475.1 | 18825.8705758968 | 9.891831227	| 0.307022284 | 32.21860998	| 9.68608390179848E-228	| 6.71600770804367E-224	125	| 43 | 32632 | 10152 | 18032 | 32.15985559	| 34.1053466 | 32688.6517018048	| 22017.1743445092	| 39357.2616309789 | Down_Nod1_CE3_Up_Nod7_ControlNod
-
-
-
+```
 Formato: 
 
 > a. Posee un conjunto de hojas de calculo que estan estructuradas de la siguiente forma:
