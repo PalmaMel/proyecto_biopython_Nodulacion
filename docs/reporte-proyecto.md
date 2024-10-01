@@ -34,19 +34,11 @@ global, como la creación de zonas muertas en áreas costeras.
 
 ## Planteamiento del problema
 
-Situación y contexto
 El frijol común (Phaseolus vulgaris) es una leguminosa de gran importancia mundial, tanto en términos de consumo humano como por su capacidad de fijar nitrógeno en simbiosis con bacterias como Rhizobium tropici y Rhizobium giardini. La fijación de nitrógeno es crítica para el crecimiento y desarrollo de la planta, ya que le permite obtener nitrógeno atmosférico en lugar de depender exclusivamente de fertilizantes externos. Sin embargo, existen diferencias en la eficiencia de esta fijación de nitrógeno dependiendo de la cepa bacteriana que infecte la planta. Se han observado variaciones significativas en las vías de asimilación de nitrógeno, el crecimiento de la planta y la senescencia celular cuando se comparan las infecciones por R. tropici (efectiva) y R. giardini (inefectiva).
 
-Problema
 Un problema crítico en la mejora de la fijación de nitrógeno y la optimización del crecimiento de las plantas es la falta de un entendimiento profundo sobre cómo diferentes cepas de Rhizobium impactan la expresión génica y, en consecuencia, el metabolismo del nitrógeno y la senescencia celular. Aunque R. tropici es conocido por ser efectivo en la fijación de nitrógeno, la infección con R. giardini provoca envejecimiento prematuro de los tejidos, posiblemente relacionado con la senescencia celular. Esto afecta negativamente el rendimiento de la planta. Además, la función de proteínas como la leghemoglobina, que se ha asociado principalmente a los nódulos, en otras partes de la planta, como los meristemos apicales, sigue sin estar completamente aclarada.
 
-Justificación y motivación
 El éxito del frijol como fuente agrícola sostenible depende en gran medida de mejorar la fijación biológica de nitrógeno y gestionar mejor la senescencia inducida por infecciones ineficaces. Al analizar comparativamente la expresión génica en plantas infectadas con R. tropici y R. giardini, es posible identificar los mecanismos moleculares responsables de estas diferencias. Además, al explorar el papel de la leghemoglobina en otras partes de la planta, como los meristemos apicales, y comparando estos datos con especies relacionadas, se podría esclarecer su rol en procesos de crecimiento y desarrollo fuera de los nódulos. También se busca entender cómo el envejecimiento prematuro puede afectar la salud celular y el ciclo de vida de las plantas.
-
-Objetivo
-El objetivo de este análisis es determinar cómo las infecciones por R. tropici y R. giardini impactan la expresión de genes relacionados con el metabolismo del nitrógeno, el crecimiento y la senescencia celular. Además, se investigará el papel de la leghemoglobina en los tallos, así como la comparación transcriptómica entre diferentes especies para desvelar mecanismos conservados o divergentes.
-
-Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efectos negativos de la senescencia inducida, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
 
 ## Objetivos:
 
@@ -57,6 +49,9 @@ Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación
 **Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular**
 
 **Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás**
+
+Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efectos negativos de la senescencia inducida, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
+
 
 ## Metodología
 
