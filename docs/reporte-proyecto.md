@@ -140,7 +140,7 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 
 ### B. Analizar la expresión de leghemoglobina en el tallo para discernir su papel en los meristemos apicales
 
-Archivo(s):   Complete repository Nodulation.xlsx Hoja ST
+Archivo(s):   Complete repository Nodulation.xlsx Hoja ST, Nod15, Nod21NI, Nod61, Nod7, Nod5
 
 Algoritmo: 
 
