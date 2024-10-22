@@ -1,25 +1,22 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Cargar los datos para R. tropici y R. giardini
-df_tropici = pd.read_excel("./data/Complete repository Nodulation.xlsx", sheet_name="Nod21NE", header=1) 
-df_giardini = pd.read_excel("./data/Complete repository Nodulation.xlsx", sheet_name="Nod21NI", header=1)
+file_N5vsNE = './data/N5vsNE.xlsx'
+file_NEvsNI = './data/NEvsNI.xlsx'
 
-# Imprimir las columnas para verificar que se cargaron correctamente
-print(df_giardini.columns)
-print(df_tropici.columns)
+N5vsNE = pd.read_excel(file_N5vsNE, sheet_name="O'Rourke_AddFile14_NEvN5")
+N5vsNE = N5vsNE[['GeneID', 'NE', 'N5', 'FoldChange']]
 
-# Filtrar genes de interés basados en la columna 'Expression'
-# Esto agrupa los datos según las categorías de la columna 'Expression'
-expression_counts = df_tropici['Expression'].value_counts()
+plt.figure(figsize=(12,6))
 
-# Mostrar el conteo de las categorías en la columna 'Expression'
-print(expression_counts)
+plt.plot(N5vsNE['GeneID'], N5vsNE['FoldChange'], label='FoldChange', marker='o', color='purple')
 
-# Graficar la distribución de las categorías de expresión
-expression_counts.plot(kind='bar', figsize=(10, 6), color=['blue', 'orange'])
-plt.title("Distribución de expresión génica: R. tropici vs R. giardini")
-plt.ylabel("Número de genes")
-plt.xlabel("Categoría de expresión")
-plt.xticks(rotation=45)
+# Añadir títulos y etiquetas
+plt.title('Comparación de Patrones de Expresión: N5 vs NE')
+plt.ylabel('Nivel de Expresión')
+plt.xticks(rotation=90)  # Rotar etiquetas de genes para mejor visualización
+plt.legend()
+
+# Mostrar la gráfica
+plt.tight_layout()
 plt.show()
