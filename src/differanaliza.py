@@ -1,18 +1,22 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df_tropici = pd.read_excel("./data/Complete repository Nodulation.xlsx", sheet_name="Nod21NE")  
-df_giardini = pd.read_excel("./data/Complete repository Nodulation.xlsx", sheet_name="Nod21NI")  
+file_N5vsNE = './data/N5vsNE.xlsx'
+file_NEvsNI = './data/NEvsNI.xlsx'
 
-nitrogen_genes = ['nifH', 'nodA', 'nodB']  
-df_filtered_tropici = df_tropici[df_tropici['ID'].isin(nitrogen_genes)]
-df_filtered_giardini = df_giardini[df_giardini['ID'].isin(nitrogen_genes)]
+N5vsNE = pd.read_excel(file_N5vsNE, sheet_name="O'Rourke_AddFile14_NEvN5")
+N5vsNE = N5vsNE[['GeneID', 'NE', 'N5', 'FoldChange']]
 
-comparison = df_filtered_tropici.set_index('ID')[['log2FoldChange']].rename(columns={'log2FoldChange': 'Tropici'})
-comparison['Giardini'] = df_filtered_giardini.set_index('ID')['log2FoldChange']
-comparison['Difference'] = comparison['Tropici'] - comparison['Giardini']
+plt.figure(figsize=(12,6))
 
-comparison[['Tropici', 'Giardini']].plot(kind='bar', figsize=(10, 6))
-plt.title("Comparación de la expresión génica: R. tropici vs R. giardini")
-plt.ylabel("log2FoldChange")
+plt.plot(N5vsNE['GeneID'], N5vsNE['FoldChange'], label='FoldChange', marker='o', color='purple')
+
+# Añadir títulos y etiquetas
+plt.title('Comparación de Patrones de Expresión: N5 vs NE')
+plt.ylabel('Nivel de Expresión')
+plt.xticks(rotation=90)  # Rotar etiquetas de genes para mejor visualización
+plt.legend()
+
+# Mostrar la gráfica
+plt.tight_layout()
 plt.show()
