@@ -6,12 +6,22 @@
 #=================================
 #=============IMPORTS=============
 import pandas as pd
-import matplotlib.pyplot as plt
+# Libreria Plotly Express para graficar de manera interactiva
+import plotly.express as px 
 #=================================
 '''
 Description:
+El siguiente script se encarga de generar una grafica de dispersion interactiva de 
 
-Se asume que hay una carpeta llamada data
+Se asume la sig organizacion del directorio de trabajo:
+```
+|-- data
+|   |-- Complete_repositorio_de_RNAseq.xlsx
+|   |-- N5vsNE.xlsx
+|   |-- NEvsNI.xlsx
+|-- src 
+    |-- differanaliza.py
+```
 usage:
     python differanaliza.py
 '''
@@ -23,17 +33,18 @@ file_NEvsNI = './data/NEvsNI.xlsx'
 N5vsNE = pd.read_excel(file_N5vsNE, sheet_name="O'Rourke_AddFile14_NEvN5")
 # Se seleccionan las columnas de interes: 'GeneID', 'NE', 'N5' y 'FoldChange'
 N5vsNE = N5vsNE[['GeneID', 'NE', 'N5', 'FoldChange']]
-# Se establecen dimensiones para el grafico
-plt.figure(figsize=(12,6))
-# se crea el grafico de lineas
-plt.plot(N5vsNE['GeneID'], N5vsNE['FoldChange'], label='FoldChange', marker='o', color='purple')
 
-# Titulos y etiquetas
-plt.title('Comparacion de Patrones de Expresion: N5 vs NE')
-plt.ylabel('Nivel de Expresion')
-plt.xticks(rotation=90)  # Rotar etiquetas de genes para mejor visualizacion
-plt.legend()
+# ===Creacion de Grafico===
 
-# Mostrar la grafica
-plt.tight_layout()
-plt.show()
+# Se crea unu gráfico de dispersion basado en el DataFrame
+# Utilizamos 'GeneID' como eje X y 'FoldChange' como eje Y.
+fig = px.scatter(N5vsNE, 
+                x='GeneID', # Columna de identificadores de genes (eje X)
+                y='FoldChange', # Columna para el cambio de expresion (cambio de expresion)
+                title='Comparacion de Patrones de Expresion: N5 vs NE', # Titulo
+                labels={ # Etiquetas para los ejes
+                    'GeneID': 'ID del Gen', 'FoldChange': 'Nivel de Expresion'})
+fig.update_traces(marker=dict(size=5, color='purple')) # Aspectos graficos: size de los puntos y color
+
+# Mostrar la grafica interactiva en el navegador 
+fig.show()
