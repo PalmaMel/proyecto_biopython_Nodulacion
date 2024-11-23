@@ -118,9 +118,21 @@ Formato:
 
 > d. Los valores
 
--
-## Resultados
+#### Preguntas de investigación
+> A. ¿Cuáles son los genes que se expresan como consecuencia de la infección por R. tropici y R. giardini, y cuáles son las consecuencias de 
+estas expresiones en las vías dependientes de nitrógeno y el crecimiento?
+Respuesta: 
 
+> B. ¿Cuál es el papel de la leghemoglobina en los meristemos apicales del tallo?
+Respuesta: 
+
+> C. ¿Cómo afecta el envejecimiento prematuro a los tejidos infectados por R. giardini y qué relación tiene con la expresión de genes asociados a la senescencia celular? ¿Qué relación hay entre la infeccion por R. giardini tiene con la expresión de genes asociados a la senescencia celular? 
+Respuesta: 
+
+> D. ¿Cómo se comparan los datos transcriptómicos de esta investigación con los de otras especies para entender mejor los mecanismos subyacentes?
+Respuesta: 
+
+## Resultados
 
 ### A. Analizar comparativamente los genes que se expresan a consecuencia de la infección por R.Tropici y R.Giardini, y sus consecuencias en vías dependientes a Nitrogeno y el crecimiento
 
@@ -159,6 +171,32 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 Archivo(s):     Complete repository Nodulation.xlsx Todas las hojas
 
 Algoritmo: 
+    - Se investigaron genes expresados en senescencia en leguminosas:
+        - Transporte de Sulfato y Hierro
+        - Cisteína Proteasas (CPs)
+            Inducidas durante la senescencia, relacionadas con el reciclaje del contenido celular y la degradación de los bacteroides.
+            Específicos de la senescencia de los nódulos: CP2, CP3, CP4, CP5 y CP6.
+        - Familia NAC
+        - Receptor Similar a Quinasa Ricos en Cisteína Simbiótico (SymCRK) y Regulador de la Diferenciación de Simbiosomas (RSD)
+            Relacionados con la senescencia de los nódulos.
+        - Familia WRKY
+        - SENESCENCE-ASSOCIATED GENE 101 (SAG101) y NBS-LRR ENHANCED DISEASE SUSCEPTIBILITY 1 (EDS1): Inducen senescencia foliar.
+        - Proteína Relacionada con la Patogénesis 10 (PR10)
+            Codifica una endonucleasa involucrada en la muerte celular programada; se induce en diferentes órganos senescentes.
+        - Gen Relacionado con la Autofagia 2 (ATG2)
+            En estudios con soja, el silenciamiento de ATG2 acelera la senescencia.
+        - Proteína Relacionada con la Patogénesis 1 (PR1)
+            Asociada a la respuesta de defensa; se induce durante la senescencia y puede estar relacionada con la inmunidad en órganos senescentes.
+        - SENESCENCE-ASSOCIATED GENE 12 (SAG12)
+        - Ribulosa-1,5-bisfosfato carboxilasa/oxigenasa (Rubisco)
+            Durante la senescencia, la actividad de Rubisco disminuye, contribuyendo a la reducción de la fotosíntesis y asociándose con la inducción de la senescencia.
+        - Efectores de Bradyrhizobium: NopM y NopL
+            NopM: Previene la señalización de defensa y la acumulación de especies reactivas de oxígeno (ROS); su ausencia puede inducir la senescencia.
+            NopL: Evita la senescencia temprana al intervenir en la fosforilación de una MAPK involucrada en la activación de la señalización de defensa.
+        - NAC969
+            Su silenciamiento provoca senescencia prematura en nódulos de Medicago truncatula.
+        - bHLH2
+            Inhibe la expresión de un gen de cisteína proteasa relacionado con la senescencia (CP77).
 
 Gráfico
 
@@ -193,4 +231,4 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 ## Referencias
  [1] O’Rourke, J.A., Iniguez, L.P., Fu, F. et al. An RNA-Seq based gene expression atlas of the common bean. BMC Genomics 15, 866 (2014). https://doi.org/10.1186/1471-2164-15-866
  [2] Wagner, S. C.. (2011) Biological Nitrogen Fixation. Nature Education Knowledge 3(10):15
- [3]
+ [3] Berrabah, F., Benaceur, F., Yin, C., Xin, D., Magne, K., Garmier, M., Gruber, V., & Ratet, P. (2024). Defense and senescence interplay in legume nodules. Plant communications, 5(4), 100888. https://doi.org/10.1016/j.xplc.2024.100888
