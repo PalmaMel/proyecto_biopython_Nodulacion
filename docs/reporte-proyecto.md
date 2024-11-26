@@ -68,6 +68,8 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 ```
 |-- data
 |   |-- Complete_repositorio_de_RNAseq.xlsx
+|   |-- N5vsNE.xlsx
+|   |-- NEvsNI.xls
 ```
 
 #### Metadatos de la carpeta de datos
