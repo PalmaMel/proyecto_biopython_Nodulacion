@@ -95,3 +95,12 @@ fig_diff.add_shape(type="line", x0=min(combi["FoldChange_N5vsNE"]), x1=max(combi
             line=dict(color="Black", dash="dash"))
 fig_diff.show()
 
+# Pasar a un archivo las IDS
+diferenciada_copy = diferenciada.copy()
+# Extraer la columna 'GeneID' como una lista
+Id_list = diferenciada_copy['GeneID'].tolist()
+# Guardar la lista de IDs en un archivo 
+path = 'results/id_list.txt'
+with open(path, 'w') as f:
+    for id in Id_list:
+        f.write(f"{id}\n")

@@ -1,40 +1,36 @@
 #=============DATA================
-# AUTHOR: Palma Luna Melissa 
+# AUTHOR: Bautista Daniel Zaid & Palma Luna Melissa 
 # MAIL: danielzb@lcg.unam.mx or melissap@lcg.unam.mx
 # TITLE: search_by_GeneID.py 
 # DATE: NOV 2024
 #=================================
 #=============IMPORTS=============
 from Bio import Entrez
+import pandas as pd
+# Importar lista de IDS de differanaliza.py
 #=================================
 
 def main ():
-    """
-    Hacer una búsqueda con esearch 
-    """
+    # Obtener lista de IDs del primer script
+    file
     # Favor de insertar su email 
     print("Por favor, antes de utilizar el código, modifica la variable 'Entrez.email' para que contenga tu dirección de correo electrónico.")
-    Entrez.email = "melissap@lcg.unam.mx"  # Reemplaza con tu dirección de correo
+    Entrez.email = "example@lcg.unam.mx"  # Reemplaza con tu dirección de correo
     
-    # Buscar ID para "Notoryctes typhlops"
-    handle = Entrez.esearch(db='taxonomy', term="Notoryctes typhlops", retmode="xml")
-    record = Entrez.read(handle)
-    handle.close()  # Cerrar el handle manualmente
-    Notoryctes_typhlops = record['IdList']
-    # print (f" El ID de Notoryctes typhlops es: {Notoryctes_typhlops"})
+    # Hacer una búsqueda en GeneBank 
+    for id in Id_list:
+        handle = Entrez.efetch(db="genbank", id=id, rettype="gb", retmode="text")
+        record = Entrez.read(handle)
+        handle.close()  # Cerrar el handle manualmente
+        print(record[0].keys())
 
-    # Buscar ID para "Chrysochloris asiatica"
-    handle2 = Entrez.esearch(db='taxonomy', term="Chrysochloris asiatica", retmode="xml")
-    record2 = Entrez.read(handle2)
-    handle2.close()
-    Chrysochloris_asiatica = record2['IdList']
-    # print (f" el ID de Chrysochloris asiatica es: {Chrysochloris_asiatica}")
-    
+'''
     #=================================
     """
     Usar el ID para obtener archivo con el linale de cada topo. 
     Contesta la pregunta:  En que punto divergen sus linajes.
     """
+
     # Obtener detalles usando efetch
     if Notoryctes_typhlops:
         handle = Entrez.efetch(db="taxonomy", id=Notoryctes_typhlops, retmode="xml")
@@ -73,5 +69,5 @@ def main ():
                 break
         print(f"\nDivergen a partir de: {ultimo_comun}")
         
-
+'''
 main()
