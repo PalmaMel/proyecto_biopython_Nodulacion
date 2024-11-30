@@ -100,14 +100,20 @@ Formato:
 
 > b. Un encabezado que la nombra como **Tabla 1**
 
-> c. Después viene una fila que describe las columnas
-    - ID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
-    - baseMean: La media de las lecturas normalizadas para este gen a través de todas las muestras.
-    - log2FoldChange: El cambio en la expresión del gen entre las condiciones comparadas, expresado como un cambio logarítmico en base 2. Valores positivos indican una mayor expresión en la condición experimental, y negativos indican menor expresión.
-    - lfcSE: El error estándar del valor de log2FoldChange, que indica la precisión de esta estimación.
-    - stat: Estadístico usado en la prueba de hipótesis para la diferencia en la expresión del gen.
-    - pvalue: Valor p de la prueba de hipótesis, que indica la significancia estadística del cambio en la expresión.
-    - padj: Valor p ajustado, que corrige los valores p originales para múltiples comparaciones (control de la tasa de falsos positivos).
+> c. Columnas:
+    Compartidas entre todas las hojas de calculo:
+    - ID,	baseMean,	log2FoldChange,	lfcSE,	stat, pvalue y padj
+    Descripción:
+        - ID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
+        - baseMean: La media de las lecturas normalizadas para este gen a través de todas las muestras.
+        - log2FoldChange: El cambio en la expresión del gen entre las condiciones comparadas, expresado como un cambio logarítmico en base 2. 
+        Valores positivos indican una mayor expresión en la condición experimental, y negativos indican menor expresión.
+        - lfcSE: El error estándar del valor de log2FoldChange, que indica la precisión de esta estimación.
+        - stat: Estadístico usado en la prueba de hipótesis para la diferencia en la expresión del gen.
+        - pvalue: Valor p de la prueba de hipótesis, que indica la significancia estadística del cambio en la expresión.
+        - padj: Valor p ajustado, que corrige los valores p originales para múltiples comparaciones (control de la tasa de falsos positivos).
+        
+    Columnas que varian entre hojas de calculo y su descripción:
     - Columnas de muestra (como "Nod1_CE3_1", "Nod7_ControlNod_1"): Datos de expresión cruda para cada muestra. Siendo el número la cantidad de días en el desarrollo. En distintas condiciones:
         RT: Root tips, 0.5 cm of tissue, collected from fertilized plants at 2nd trifoliate stage of development
         ST: Shoot tip, including the apical meristem, collected at the 2nd trifoliate stage
@@ -118,43 +124,27 @@ Formato:
     - Columnas "normalized": Expresión de los genes, pero normalizada para facilitar la comparación entre muestras.
     - Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
 
-> d. Los valores
-
-
 - N5vsNE.xlsx: formato xlsx
 Formato: 
 
-> a. Posee una unica hoja de calculo que estaa estructuradas de la siguiente forma:
-
-> b. Un encabezado que la nombra como **Tabla 1**
-
+> a. Posee una unica hoja de calculo que esta estructuradas de la siguiente forma:
+    Columnas:
+    - GeneID,NE,N5:,FoldChange,Prob DE, PfamID, Pfam_Description, PANTHER_ID, Panther_Description, KOG_ID, KOG_Description, EC_ID, EC_Description, KO_ID, KO_Description, GO_ID, GO_Description, Transcription Factor Family, Gmax_BLASTN_TopHit, Gmax_BLASTN_TopHit_Evalue, Gmax_BLASTN_TopHit_%ID, Gmax_BLASTN_Hit2, Gmax_BLASTN_Hit2_Evalue, Gmax_BLASTN_Hit2_%ID, Glyma_BP_GO y Glyma_MF_GO	
+    
+    Descripción de las columnas mas importantes:
     - GeneID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
-    - NE	
-    - N5
-    - FoldChange	
-    - Prob DE	
-    - PfamID	
-    - Pfam_Description 			
-    - PANTHER_ID	
-    - Panther_Description 	
-    - KOG_ID	
-    - KOG_Description 	
-    - EC_ID	
-    - EC_Description	
-    - KO_ID	KO_Description 	
-    - GO_ID	GO_Description 	
-    - Transcription Factor Family	
-    - Gmax_BLASTN_TopHit	
-    - Gmax_BLASTN_TopHit_Evalue	
-    - Gmax_BLASTN_TopHit_%ID	
-    - Gmax_BLASTN_Hit2	
-    - Gmax_BLASTN_Hit2_Evalue	
-    - Gmax_BLASTN_Hit2_%ID	
-    - Glyma_BP_GO	Glyma_MF_GO	
+    - NE: Número de nódulos fix+ recogidos 21 DAI(days after inoculation)
+    - N5: Número de Nódulos de pre-fijación (fix+) recogidos 5 DAI(days after inoculation)
+    - FoldChange: Cambio relativo en la expresión génica entre condiciones 
 
-
-- NEvsNI.xls : formato xlsx
-
+    -   NEvsNI.xls : formato xlsx
+    Columnas:
+    - GeneID, NE, NI, FoldChange, Prob DE, PfamID, Pfam_Description, PANTHER_ID, Panther_Description, KOG_ID, KOG_Description, 	EC_ID,	EC_Description,	KO_ID,	KO_Description, 	GO_ID,	GO_Description, Transcription Factor, Family	Gmax_BLASTN_TopHit	Gmax_BLASTN_TopHit_Evalue	Gmax_BLASTN_TopHit_%ID	Gmax_BLASTN_Hit2	Gmax_BLASTN_Hit2_Evalue,	Gmax_BLASTN_Hit2_%ID, Glyma_BP_GO y Glyma_MF_GO
+    Descripción de las columnas mas importantes:
+    - GeneID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
+    - NE: Número de nódulos fix+ recogidos 21 DAI (days after inoculation)
+    - NI: Número de Nódulos Fix- nodules recogidos 21 DAI (days after inoculation)
+    - FoldChange: Cambio relativo en la expresión génica entre condiciones 	
 
 #### Preguntas de investigación
 > A. ¿Cuáles son los genes que se expresan como consecuencia de la infección por R. tropici y R. giardini, y cuáles son las consecuencias de 
