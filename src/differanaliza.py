@@ -73,3 +73,25 @@ figN5vsNI = px.scatter(N5vsNI,
                     labels={
                         'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
 figN5vsNI.show()
+
+
+diff1 = combi[(combi['FoldChange_N5vsNE'] < 0) & (combi['FoldChange_N5vsNI'] > 0)]
+diff1['Categoría:'] = 'NE < 0, NI >0'
+diff2 =  combi[(combi['FoldChange_N5vsNE'] > 0) & (combi['FoldChange_N5vsNI'] < 0)]
+diff2['Categoría:'] = 'NE > 0, NI <0'
+diferenciada = pd.concat([diff1,diff2])
+
+fig_diff = px.scatter(diferenciada, 
+                x='FoldChange_N5vsNE', # Columna de identificadores de genes (eje X)
+                y='FoldChange_N5vsNI', # Columna para el cambio de expresion (cambio de expresion)
+                title='Genes con expresión diferencial respecto a N5', # Titulo
+                labels={ # Etiquetas para los ejes 
+                    'GeneID': 'ID del Gen', 'FoldChange_N5vsNI': 'Nivel de Expresion', 'FoldChange_N5vsNE': 'Nivel de Expresión'},
+                hover_data= ['GeneID'])
+
+fig_diff.add_shape(type="line", x0=0, x1=0, y0=min(combi["FoldChange_N5vsNI"]), y1=max(combi["FoldChange_N5vsNI"]),
+              line=dict(color="Black", dash="dash"))
+fig_diff.add_shape(type="line", x0=min(combi["FoldChange_N5vsNE"]), x1=max(combi["FoldChange_N5vsNE"]), y0=0, y1=0,
+              line=dict(color="Black", dash="dash"))
+fig_diff.show()
+
