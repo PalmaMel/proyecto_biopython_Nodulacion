@@ -8,7 +8,7 @@ Este repositorio puede ser utilizado para obtener datos que faciliten una compre
 ## Instalacion 
 Se puede instalar el paquete desde el repositorio de codigo fuente clonando el repositorio en la maquina local:
 
-```
+```bash
 git clone https://github.com/PalmaMel/proyecto_biopython_Nodulacion
 # Cambia al directorio del repositorio clonado:
 cd proyecto_biopython_Nodulacion
@@ -18,7 +18,7 @@ Para verificar que el paquete se haya instalado correctamente, abre una terminal
 
 ## Control de errores
 
-En caso de encontrar un error consultar con danielzb@lcg.unam.mx o melissap@lcg.unam.mx
+En caso de encontrar un error consultar con danielzb@lcg.unam.mx o melissap@lcg.unam.mx.
 
 ## Pruebas
 El paquete cuenta con pruebas para los modulos que componen el paquete...
