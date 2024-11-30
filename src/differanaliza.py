@@ -25,6 +25,7 @@ Se asume la sig organizacion del directorio de trabajo:
 |   |-- NEvsNI.xlsx
 |-- src 
     |-- differanaliza.py
+|--results
 ```
 usage:
     python differanaliza.py
@@ -32,6 +33,7 @@ usage:
 #==================CODE===================
 # Definimos las rutas de los archivos
 file_N5vsNE = './data/N5vsNE.xlsx'
+file_NEvsNI= './data/NEvsNI.xlsx'
 # Se leen los archivos excel con pandas 
 N5vsNE = pd.read_excel(file_N5vsNE, sheet_name="O'Rourke_AddFile14_NEvN5")
 NEvsNI = pd.read_excel(file_NEvsNI, sheet_name="O'Rourke_AddFile15_NEvNI")

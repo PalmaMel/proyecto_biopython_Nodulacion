@@ -7,22 +7,46 @@
 #=============IMPORTS=============
 from Bio import Entrez
 import pandas as pd
-# Importar lista de IDS de differanaliza.py
+# Importar lista de IDS de results
 #=================================
+
+
+'''
+El siguiente script por medio de 
+
+
+
+
+Se asume la siguiente estructura de la carpeta de trabajo
+|-- data
+|   |-- Complete_repositorio_de_RNAseq.xlsx
+|   |-- N5vsNE.xlsx
+|   |-- NEvsNI.xlsx
+|-- src 
+    |-- differanaliza.py
+|   |--search_by_GeneID.py
+|--results
+|   |-- id_list.txt
+'''
 
 def main ():
     # Obtener lista de IDs del primer script
-    file
+    Id_list='results/id_list.txt'
     # Favor de insertar su email 
     print("Por favor, antes de utilizar el código, modifica la variable 'Entrez.email' para que contenga tu dirección de correo electrónico.")
     Entrez.email = "example@lcg.unam.mx"  # Reemplaza con tu dirección de correo
     
     # Hacer una búsqueda en GeneBank 
-    for id in Id_list:
+    handle = Entrez.efetch(db="genbank", id='', rettype="gb", retmode="xml")
+    record = Entrez.read(handle)
+    handle.close()
+    print(record.keys())
+
+'''    for id in Id_list:
         handle = Entrez.efetch(db="genbank", id=id, rettype="gb", retmode="text")
         record = Entrez.read(handle)
         handle.close()  # Cerrar el handle manualmente
-        print(record[0].keys())
+        print(record[0].keys())'''
 
 '''
     #=================================
