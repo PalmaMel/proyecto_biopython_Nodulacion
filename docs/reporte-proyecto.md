@@ -124,8 +124,7 @@ Formato:
 > d. Los valores
 
 #### Preguntas de investigación
-> A. ¿Cuáles son los genes que se expresan como consecuencia de la infección por R. tropici y R. giardini, y cuáles son las consecuencias de 
-estas expresiones en las vías dependientes de nitrógeno y el crecimiento?
+> A. ¿Cuáles son los genes que como consecuencia de la infección por R. giardini cambian su expresión, con respecto al control y R. tropici, y cuáles son las consecuencias de estos cambios en las vías dependientes de nitrógeno y el crecimiento?
 Respuesta: 
 
 > B. ¿Cuál es el papel de la leghemoglobina en los meristemos apicales del tallo?
