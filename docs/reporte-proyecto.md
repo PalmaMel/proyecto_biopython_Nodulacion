@@ -86,6 +86,9 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 #### Formato de los archivos
 
 - `Complete repository Nodulation.xlsx` : formato xlsx
+-
+-
+
 
 ```
 Tabla 1																	
@@ -147,8 +150,7 @@ Formato:
     - FoldChange: Cambio relativo en la expresión génica entre condiciones 	
 
 #### Preguntas de investigación
-> A. ¿Cuáles son los genes que se expresan como consecuencia de la infección por R. tropici y R. giardini, y cuáles son las consecuencias de 
-estas expresiones en las vías dependientes de nitrógeno y el crecimiento?
+> A. ¿Cuáles son los genes que como consecuencia de la infección por R. giardini cambian su expresión, con respecto al control y R. tropici, y cuáles son las consecuencias de estos cambios en las vías dependientes de nitrógeno y el crecimiento?
 Respuesta: 
 
 > B. ¿Cuál es el papel de la leghemoglobina en los meristemos apicales del tallo?
