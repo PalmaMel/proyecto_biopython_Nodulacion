@@ -11,7 +11,9 @@ import plotly.express as px
 #=================================
 '''
 Description:
-El siguiente script se encarga de generar una grafica de dispersion interactiva de 
+El siguiente script se encarga de generar una grafica de dispersion interactiva de los niveles de expresión de
+los genes dentro de N5 que corresponden a los Nódulos de pre-fijación (fix+) recogidos 5 DAI(days after inoculation)
+vs NI que corresponde a los nódulos fix+ recogidos 21 DAI(days after inoculation)
 
 Se asume la sig organizacion del directorio de trabajo:
 ```

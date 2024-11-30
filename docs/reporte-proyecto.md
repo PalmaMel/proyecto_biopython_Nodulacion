@@ -1,7 +1,7 @@
 # Nodulacion en *Phaseolus vulgaris*
 
-Nombre: <!-- Daniel Bautista (<danielzb@lcg.unam.mx>)  
-Nombre: <!-- Palma Melissa (<melissap@lcg.unam.mx>) 
+Nombre: Daniel Bautista (<danielzb@lcg.unam.mx>)  
+Nombre: Palma Melissa (<melissap@lcg.unam.mx>) 
 
 Fecha:  10/09/2024
 
@@ -57,8 +57,8 @@ Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación
 Se descargaron los datos del repositorio *Phaseolus vulgaris* gene expression atlas (PvGEA) disponible en: (<https://www.zhaolab.org/PvGEA/>)
 y publicado en el articulo: `An RNA-Seq based gene expression atlas of the common bean`
 
-Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa; 
-raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
+Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa: raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
+
 
 
 ### A. Datos de Entrada 
@@ -119,6 +119,42 @@ Formato:
     - Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
 
 > d. Los valores
+
+
+- N5vsNE.xlsx: formato xlsx
+Formato: 
+
+> a. Posee una unica hoja de calculo que estaa estructuradas de la siguiente forma:
+
+> b. Un encabezado que la nombra como **Tabla 1**
+
+    - GeneID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
+    - NE	
+    - N5
+    - FoldChange	
+    - Prob DE	
+    - PfamID	
+    - Pfam_Description 			
+    - PANTHER_ID	
+    - Panther_Description 	
+    - KOG_ID	
+    - KOG_Description 	
+    - EC_ID	
+    - EC_Description	
+    - KO_ID	KO_Description 	
+    - GO_ID	GO_Description 	
+    - Transcription Factor Family	
+    - Gmax_BLASTN_TopHit	
+    - Gmax_BLASTN_TopHit_Evalue	
+    - Gmax_BLASTN_TopHit_%ID	
+    - Gmax_BLASTN_Hit2	
+    - Gmax_BLASTN_Hit2_Evalue	
+    - Gmax_BLASTN_Hit2_%ID	
+    - Glyma_BP_GO	Glyma_MF_GO	
+
+
+- NEvsNI.xls : formato xlsx
+
 
 #### Preguntas de investigación
 > A. ¿Cuáles son los genes que se expresan como consecuencia de la infección por R. tropici y R. giardini, y cuáles son las consecuencias de 

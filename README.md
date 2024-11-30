@@ -8,18 +8,17 @@ Este repositorio puede ser utilizado para obtener datos que faciliten una compre
 ## Instalacion 
 Se puede instalar el paquete desde el repositorio de codigo fuente clonando el repositorio en la maquina local:
 
-'''
-git clone https://github.com/PalmaMel/proyecto_biopython
+```
+git clone https://github.com/PalmaMel/proyecto_biopython_Nodulacion
 # Cambia al directorio del repositorio clonado:
-cd repositorio
-
-'''
+cd proyecto_biopython_Nodulacion
+```
 
 Para verificar que el paquete se haya instalado correctamente, abre una terminal o consola de Python e intenta importar el paquete
 
 ## Control de errores
 
-En caso de encontrar un error consultar con nosotros.
+En caso de encontrar un error consultar con danielzb@lcg.unam.mx o melissap@lcg.unam.mx
 
 ## Pruebas
 El paquete cuenta con pruebas para los modulos que componen el paquete...
@@ -30,7 +29,7 @@ Ejemplo de uso:
 
 ## Data
 
-Se estará trabajando con un compendio de datos publicos compilados por nosotros. Esta guardado como (Complete repository Nodulation.xlsx)
+Se estará trabajando con un compendio de datos publicos compilados por nosotros. Esta guardado como (Complete repository Nodulation.xlsx), N5vsNE.xlsx y NEvsNI.xls
 
 ## Metadatos y documentacion
 
