@@ -90,8 +90,8 @@ fig_diff = px.scatter(diferenciada,
                 hover_data= ['GeneID'])
 
 fig_diff.add_shape(type="line", x0=0, x1=0, y0=min(combi["FoldChange_N5vsNI"]), y1=max(combi["FoldChange_N5vsNI"]),
-              line=dict(color="Black", dash="dash"))
+            line=dict(color="Black", dash="dash"))
 fig_diff.add_shape(type="line", x0=min(combi["FoldChange_N5vsNE"]), x1=max(combi["FoldChange_N5vsNE"]), y0=0, y1=0,
-              line=dict(color="Black", dash="dash"))
+            line=dict(color="Black", dash="dash"))
 fig_diff.show()
 

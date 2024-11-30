@@ -7,16 +7,14 @@
 #=============IMPORTS=============
 from Bio import Entrez
 #=================================
-def main ():
-    #==========PRIMERA_PARTE========== 
-    """
-    Hacer una búsqueda con esearch (en este caso contamos con los nombres de los organismos), 
-    la búsqueda nos dará su ID.
 
-    ORGANISMOS: Notoryctes typhlops y Chrysochloris asiatica
+def main ():
+    """
+    Hacer una búsqueda con esearch 
     """
     # Favor de insertar su email 
-    Entrez.email = "@lcg.unam.mx" 
+    print("Por favor, antes de utilizar el código, modifica la variable 'Entrez.email' para que contenga tu dirección de correo electrónico.")
+    Entrez.email = "melissap@lcg.unam.mx"  # Reemplaza con tu dirección de correo
     
     # Buscar ID para "Notoryctes typhlops"
     handle = Entrez.esearch(db='taxonomy', term="Notoryctes typhlops", retmode="xml")
