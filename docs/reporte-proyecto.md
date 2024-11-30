@@ -68,6 +68,8 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 ```
 |-- data
 |   |-- Complete_repositorio_de_RNAseq.xlsx
+|   |-- N5vsNE.xlsx
+|   |-- NEvsNI.xlsx
 ```
 
 #### Metadatos de la carpeta de datos
@@ -84,6 +86,9 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 #### Formato de los archivos
 
 - `Complete repository Nodulation.xlsx` : formato xlsx
+-
+-
+
 
 ```
 Tabla 1																	

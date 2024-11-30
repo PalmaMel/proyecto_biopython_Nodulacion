@@ -53,11 +53,11 @@ figN5vsNE.update_traces(marker=dict(size=5, color='purple')) # Aspectos graficos
 figN5vsNE.show()
 
 figNEvsNI = px.scatter(NEvsNI,
-                       x='GeneID',
-                       y= 'FoldChange',
-                       title= 'Log2Fold Change: NE vs NI',
-                       labels={
-                           'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
+                    x='GeneID',
+                    y= 'FoldChange',
+                    title= 'Log2Fold Change: NE vs NI',
+                    labels={
+                        'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
 figNEvsNI.show()
 
 combi = pd.merge(N5vsNE, NEvsNI, on= 'GeneID', suffixes=('_N5vsNE', '_NEvsNI'))
@@ -67,9 +67,9 @@ combi['FoldChange_N5vsNI'] = combi['FoldChange_N5vsNE'] + combi['FoldChange_NEvs
 N5vsNI = combi[['GeneID', 'FoldChange_N5vsNI']]
 
 figN5vsNI = px.scatter(N5vsNI,
-                       x='GeneID',
-                       y= 'FoldChange_N5vsNI',
-                       title= 'Log2Fold Change: N5 vs NI',
-                       labels={
-                           'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
+                    x='GeneID',
+                    y= 'FoldChange_N5vsNI',
+                    title= 'Log2Fold Change: N5 vs NI',
+                    labels={
+                        'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
 figN5vsNI.show()
