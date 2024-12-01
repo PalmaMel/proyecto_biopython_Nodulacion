@@ -1,97 +1,27 @@
-#=============DATA================
-# AUTHOR: Bautista Daniel Zaid & Palma Luna Melissa 
-# MAIL: danielzb@lcg.unam.mx or melissap@lcg.unam.mx
-# TITLE: search_by_GeneID.py 
-# DATE: NOV 2024
-#=================================
-#=============IMPORTS=============
-from Bio import Entrez
 import pandas as pd
-# Importar lista de IDS de results
-#=================================
+
+# Cargar la lista de GeneIDs desde un archivo de texto
+with open("results/id_list.txt", "r") as file:
+    gene_ids = [line.strip() for line in file if line.strip()]
 
 
-'''
-El siguiente script por medio de 
+file_NEvsNI= './data/NEvsNI.xlsx'
+# Se leen los archivos excel con pandas 
+NEvsNI = pd.read_excel(file_NEvsNI, sheet_name="O'Rourke_AddFile15_NEvNI")
 
+# Filtrar las filas que contienen los GeneIDs
+filtered_data = NEvsNI[NEvsNI['GeneID'].isin(gene_ids)]
 
+# Seleccionar las columnas relevantes
+columns_to_save = [
+    'GeneID', 'PfamID', 'Pfam_Description', 'PANTHER_ID', 'Panther_Description ',
+    'KOG_ID', 'KOG_Description ', 'EC_ID', 'EC_Description', 'GO_Description ',
+    'Transcription Factor Family'
+]
+filtered_data = filtered_data[columns_to_save]
 
+# Guardar los resultados en un archivo CSV
+output_file = "filtered_gene_data.csv"
+filtered_data.to_csv(output_file, index=False)
 
-Se asume la siguiente estructura de la carpeta de trabajo
-|-- data
-|   |-- Complete_repositorio_de_RNAseq.xlsx
-|   |-- N5vsNE.xlsx
-|   |-- NEvsNI.xlsx
-|-- src 
-    |-- differanaliza.py
-|   |--search_by_GeneID.py
-|--results
-|   |-- id_list.txt
-'''
-
-def main ():
-    # Obtener lista de IDs del primer script
-    Id_list='results/id_list.txt'
-    # Favor de insertar su email 
-    print("Por favor, antes de utilizar el código, modifica la variable 'Entrez.email' para que contenga tu dirección de correo electrónico.")
-    Entrez.email = "example@lcg.unam.mx"  # Reemplaza con tu dirección de correo
-    
-    # Hacer una búsqueda en GeneBank 
-    handle = Entrez.efetch(db="genbank", id='', rettype="gb", retmode="xml")
-    record = Entrez.read(handle)
-    handle.close()
-    print(record.keys())
-
-'''    for id in Id_list:
-        handle = Entrez.efetch(db="genbank", id=id, rettype="gb", retmode="text")
-        record = Entrez.read(handle)
-        handle.close()  # Cerrar el handle manualmente
-        print(record[0].keys())'''
-
-'''
-    #=================================
-    """
-    Usar el ID para obtener archivo con el linale de cada topo. 
-    Contesta la pregunta:  En que punto divergen sus linajes.
-    """
-
-    # Obtener detalles usando efetch
-    if Notoryctes_typhlops:
-        handle = Entrez.efetch(db="taxonomy", id=Notoryctes_typhlops, retmode="xml")
-        record = Entrez.read(handle)
-        handle.close()
-        # Se imprime linaje completo de Notoryctes typhlops:
-        # print("Linaje de Notoryctes typhlops:")
-        linaje_Not= record[0]["Lineage"]
-        print (f"\n{linaje_Not}")
-
-    if Chrysochloris_asiatica:
-        handle2 = Entrez.efetch(db="taxonomy", id=Chrysochloris_asiatica, retmode="xml")
-        record2 = Entrez.read(handle2)
-        handle2.close()
-        # Se imprime linaje completo de Chrysochloris asiatica
-        # print(f"\Linaje de Chrysochloris asiatica:")
-        linaje_chry=record2[0]["Lineage"]
-        # print(linaje_chry)
-        linaje_Not_list = linaje_Not.split('; ')
-    
-        # Convertir el linaje de Chrysochloris asiatica a lista
-        linaje_chry_list = linaje_chry.split('; ')
-        
-        # compararamos linajes usando lista del linaje de Chrysochloris asiatica
-        common=[] 
-        for ancestor in linaje_chry_list:
-            if ancestor in linaje_Not_list:
-                common.append(ancestor)
-        print(f" Lo comunes entre ambos organismos son:\n{common}")
-        
-        # Obtenemos ultimo ancestro comun
-        ultimo_comun = None
-        for ancestor in reversed(linaje_chry_list):
-            if ancestor in linaje_Not_list:
-                ultimo_comun = ancestor
-                break
-        print(f"\nDivergen a partir de: {ultimo_comun}")
-        
-'''
-main()
+print(f"Datos filtrados guardados en {output_file}")
