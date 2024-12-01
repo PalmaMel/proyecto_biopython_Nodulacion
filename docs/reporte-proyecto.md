@@ -48,7 +48,6 @@ El éxito del frijol como fuente agrícola sostenible depende en gran medida de 
 
 **Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular**
 
-**Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás**
 
 Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efecto del crecimiento atrofiado, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
 
@@ -159,8 +158,6 @@ Respuesta:
 > C. ¿Cómo afecta el envejecimiento prematuro a los tejidos infectados por R. giardini y qué relación tiene con la expresión de genes asociados a la senescencia celular? ¿Qué relación hay entre la infeccion por R. giardini tiene con la expresión de genes asociados a la senescencia celular? 
 Respuesta: 
 
-> D. ¿Cómo se comparan los datos transcriptómicos de esta investigación con los de otras especies para entender mejor los mecanismos subyacentes?
-Respuesta: 
 
 ## Resultados
 
