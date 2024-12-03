@@ -104,7 +104,9 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 > A. ¿Cuáles son los genes que como consecuencia de la infección por R. giardini cambian su expresión, con respecto al control y R. tropici, y cuáles son las consecuencias de estos cambios en las vías dependientes de nitrógeno y el crecimiento?
 
 Respuesta: 
+
     Genes: 
+    
         - Phvul.001G142000.1
         - Phvul.002G064200.1
         - Phvul.003G103500.1
