@@ -23,14 +23,14 @@ de la planta.
 
 En el caso de legumbres como *P.vulgaris* estas bacterias colonizan el sistema de raíces de la planta huésped y 
 hacen que las raíces formen nódulos (anaeróbicos) para albergar a las bacterias que empezaron a fijar nitrógeno que la
-planta aprovechara para producir semillas ricas en nitrógeno. Siendo las legumbres no noduladas bajas en nitrógeno y con 
-una producción baja de semillas.
+planta aprovechara para producir semillas ricas en nitrógeno. Siendo las legumbres no noduladas bajas en nitrógeno y 
+con una producción baja de semillas.
 
-La fijación e nitrógeno desempeña un papel fundamental en el mantenimiento de la salud de los ecosistemas tanto acuáticos como 
-terrestres en todo el planeta, es el estudio de los mecanismos que subyacen a las relaciones simbióticas, la formación de nódulos
-y la fijación de nitrógeno de gran importancia, por ejemplo como una posible alternativa natural para suministrar este nutriente 
-esencial a las plantas en contraste fertilizantes sintéticos cuyo uso excesivo ha generado serios problemas ecológicos a nivel 
-global, como la creación de zonas muertas en áreas costeras. 
+La fijación e nitrógeno desempeña un papel fundamental en el mantenimiento de la salud de los ecosistemas tanto acuáticos 
+como terrestres en todo el planeta, es el estudio de los mecanismos que subyacen a las relaciones simbióticas, la formación 
+de nódulos y la fijación de nitrógeno de gran importancia, por ejemplo como una posible alternativa natural para suministrar
+este nutriente esencial a las plantas en contraste fertilizantes sintéticos cuyo uso excesivo ha generado serios problemas 
+ecológicos a nivel global, como la creación de zonas muertas en áreas costeras. 
 
 ## Planteamiento del problema
 
@@ -55,7 +55,7 @@ Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación
 Se descargaron los datos del repositorio *Phaseolus vulgaris* gene expression atlas (PvGEA) disponible en: (<https://www.zhaolab.org/PvGEA/>)
 y publicado en el articulo: `An RNA-Seq based gene expression atlas of the common bean`
 
-Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa: raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
+Los datos de entrada consisten los genes diferencialmente expresados entre distintas condiciones de inoculacion en los nodulo. Los archivos con los datos se encuentras en formato xlsx.
 
 ### A. Datos de Entrada 
 
@@ -63,68 +63,22 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 
 ```
 |-- data
-|   |-- Complete_repositorio_de_RNAseq.xlsx
 |   |-- N5vsNE.xlsx
 |   |-- NEvsNI.xls
 ```
 
 #### Metadatos de la carpeta de datos
 
-
-> Versión/Identificador del genoma: Única (1.0) 
-
 > Fecha de descarga: 08/09/2024
 
 >| Archivo | Descripción  | Tipo | 
 |:--      |:--           |:--  |
-| Complete repository Nodulation.xlsx  | Conjunto de datos transcriptomicos de P. vulgaris en distintas condiciones  | Formato xlsx |
+|  N5vsNE.xlsx | Contiene datos de expresión génica comparando las condiciones N5 y NE| Formato xlsx |
+|  NEvsNI.xls | Contiene datos de expresión génica comparando las condiciones NE y NI | Formato xlsx |
 
 #### Formato de los archivos
 
-- `Complete repository Nodulation.xlsx` : formato xlsx
--
--
-
-
-```
-Tabla 1																	
-ID	baseMean | log2FoldChange | lfcSE | stat | pvalue | padj | Nod1_CE3_1 | Nod1_CE3_2 | Nod7_ControlNod_1 | Nod7_ControlNod_2	Nod7_ControlNod_3 | Nod1_CE3_1_normalized | Nod1_CE3_2_normalized | Nod7_ControlNod_1_normalized	Nod7_ControlNod_2_normalized | Nod7_ControlNod_3_normalized | Expression
-Phvul.005G176566.1 | 44782.3494466328 | 11.87766212 | 0.317104344 | 37.45663639 | 4.68390446134868E-307 | 9.7429896700514E-303 | 75 | 26 | 77938 | 24632 | 42324 | 19.29591336 | 20.62183748 | 78073.3064579329 | 53420.7090675681 | 92377.8139568296 | Down_Nod1_CE3_Up_Nod7_ControlNod
-Phvul.005G050500.1 | 14403.3290991897 | 11.53764934 | 0.350822334 | 32.88744251 | 3.32318903771128E-237 | 3.45628275867162E-233	38 | 6 | 25497 | 8869 | 12474 | 9.776596101	| 4.758885572 | 25541.264784289	| 19234.6650178736	| 27226.1802121135 |  Down_Nod1_CE3_Up_Nod7_ControlNod
-Phvul.005G176475.1 | 18825.8705758968 | 9.891831227	| 0.307022284 | 32.21860998	| 9.68608390179848E-228	| 6.71600770804367E-224	125	| 43 | 32632 | 10152 | 18032 | 32.15985559	| 34.1053466 | 32688.6517018048	| 22017.1743445092	| 39357.2616309789 | Down_Nod1_CE3_Up_Nod7_ControlNod
-```
-Formato: 
-
-> a. Posee un conjunto de hojas de calculo que estan estructuradas de la siguiente forma:
-
-> b. Un encabezado que la nombra como **Tabla 1**
-
-> c. Columnas:
-    Compartidas entre todas las hojas de calculo:
-    - ID,	baseMean,	log2FoldChange,	lfcSE,	stat, pvalue y padj
-    Descripción:
-        - ID: Identificador del gen, en este caso nombres como Phvul.005G176566.1 (posiblemente genes del frijol común).
-        - baseMean: La media de las lecturas normalizadas para este gen a través de todas las muestras.
-        - log2FoldChange: El cambio en la expresión del gen entre las condiciones comparadas, expresado como un cambio logarítmico en base 2. 
-        Valores positivos indican una mayor expresión en la condición experimental, y negativos indican menor expresión.
-        - lfcSE: El error estándar del valor de log2FoldChange, que indica la precisión de esta estimación.
-        - stat: Estadístico usado en la prueba de hipótesis para la diferencia en la expresión del gen.
-        - pvalue: Valor p de la prueba de hipótesis, que indica la significancia estadística del cambio en la expresión.
-        - padj: Valor p ajustado, que corrige los valores p originales para múltiples comparaciones (control de la tasa de falsos positivos).
-        
-    Columnas que varian entre hojas de calculo y su descripción:
-    - Columnas de muestra (como "Nod1_CE3_1", "Nod7_ControlNod_1"): Datos de expresión cruda para cada muestra. Siendo el número la cantidad de días en el desarrollo. En distintas condiciones:
-        RT: Root tips, 0.5 cm of tissue, collected from fertilized plants at 2nd trifoliate stage of development
-        ST: Shoot tip, including the apical meristem, collected at the 2nd trifoliate stage
-        YR:  Whole roots, including root tips, collected at the 2nd trifoliate stage of development
-        PvRE: Whole roots separated from fix+ nodules collected 21 days after inoculation
-        PvRF: Whole roots from fertilized plants collected at the same time as RE and RI Whole roots separated from fix- nodules collected 21 DAI
-        PvRI: Whole roots separated from fix- nodules collected 21 days after inoculation
-    - Columnas "normalized": Expresión de los genes, pero normalizada para facilitar la comparación entre muestras.
-    - Expression: Descripción del patrón de expresión del gen, en este caso "Down_Nod1_CE3_Up_Nod7_ControlNod", lo que indica que el gen se expresa menos en una condición y más en otra.
-
 - N5vsNE.xlsx: formato xlsx
-Formato: 
 
 > a. Posee una unica hoja de calculo que esta estructuradas de la siguiente forma:
     Columnas:
@@ -136,7 +90,8 @@ Formato:
     - N5: Número de Nódulos de pre-fijación (fix+) recogidos 5 DAI(days after inoculation)
     - FoldChange: Cambio relativo en la expresión génica entre condiciones 
 
-    -   NEvsNI.xls : formato xlsx
+-   NEvsNI.xls : formato xlsx
+
     Columnas:
     - GeneID, NE, NI, FoldChange, Prob DE, PfamID, Pfam_Description, PANTHER_ID, Panther_Description, KOG_ID, KOG_Description, 	EC_ID,	EC_Description,	KO_ID,	KO_Description, 	GO_ID,	GO_Description, Transcription Factor, Family	Gmax_BLASTN_TopHit	Gmax_BLASTN_TopHit_Evalue	Gmax_BLASTN_TopHit_%ID	Gmax_BLASTN_Hit2	Gmax_BLASTN_Hit2_Evalue,	Gmax_BLASTN_Hit2_%ID, Glyma_BP_GO y Glyma_MF_GO
     Descripción de las columnas mas importantes:
@@ -147,7 +102,19 @@ Formato:
 
 #### Preguntas de investigación
 > A. ¿Cuáles son los genes que como consecuencia de la infección por R. giardini cambian su expresión, con respecto al control y R. tropici, y cuáles son las consecuencias de estos cambios en las vías dependientes de nitrógeno y el crecimiento?
+
 Respuesta: 
+    Genes: 
+        - Phvul.001G142000.1
+        - Phvul.002G064200.1
+        - Phvul.003G103500.1
+        - Phvul.003G223600.1
+        - Phvul.010G031100.1
+        - Phvul.001G225000.1
+        - Phvul.005G083400.1
+        - Phvul.007G100800.1
+        - Phvul.008G139900.1
+        - Phvul.011G077900.1
 
 > B. ¿Cuál es el papel de la leghemoglobina en los meristemos apicales del tallo?
 Respuesta: 
@@ -164,6 +131,7 @@ Archivo(s): `N5vsNE.xlsx`, `NEvsNI.xlsx`
 Algoritmo: 
 
 Gráfico:
+![alt text](../results/Grafica4.png)
 
 1. 
 
@@ -194,32 +162,6 @@ Solución: Describir paso a paso la solución, incluyendo los comandos correspon
 Archivo(s):     Complete repository Nodulation.xlsx Todas las hojas
 
 Algoritmo: 
-    - Se investigaron genes expresados en senescencia en leguminosas:
-        - Transporte de Sulfato y Hierro
-        - Cisteína Proteasas (CPs)
-            Inducidas durante la senescencia, relacionadas con el reciclaje del contenido celular y la degradación de los bacteroides.
-            Específicos de la senescencia de los nódulos: CP2, CP3, CP4, CP5 y CP6.
-        - Familia NAC
-        - Receptor Similar a Quinasa Ricos en Cisteína Simbiótico (SymCRK) y Regulador de la Diferenciación de Simbiosomas (RSD)
-            Relacionados con la senescencia de los nódulos.
-        - Familia WRKY
-        - SENESCENCE-ASSOCIATED GENE 101 (SAG101) y NBS-LRR ENHANCED DISEASE SUSCEPTIBILITY 1 (EDS1): Inducen senescencia foliar.
-        - Proteína Relacionada con la Patogénesis 10 (PR10)
-            Codifica una endonucleasa involucrada en la muerte celular programada; se induce en diferentes órganos senescentes.
-        - Gen Relacionado con la Autofagia 2 (ATG2)
-            En estudios con soja, el silenciamiento de ATG2 acelera la senescencia.
-        - Proteína Relacionada con la Patogénesis 1 (PR1)
-            Asociada a la respuesta de defensa; se induce durante la senescencia y puede estar relacionada con la inmunidad en órganos senescentes.
-        - SENESCENCE-ASSOCIATED GENE 12 (SAG12)
-        - Ribulosa-1,5-bisfosfato carboxilasa/oxigenasa (Rubisco)
-            Durante la senescencia, la actividad de Rubisco disminuye, contribuyendo a la reducción de la fotosíntesis y asociándose con la inducción de la senescencia.
-        - Efectores de Bradyrhizobium: NopM y NopL
-            NopM: Previene la señalización de defensa y la acumulación de especies reactivas de oxígeno (ROS); su ausencia puede inducir la senescencia.
-            NopL: Evita la senescencia temprana al intervenir en la fosforilación de una MAPK involucrada en la activación de la señalización de defensa.
-        - NAC969
-            Su silenciamiento provoca senescencia prematura en nódulos de Medicago truncatula.
-        - bHLH2
-            Inhibe la expresión de un gen de cisteína proteasa relacionado con la senescencia (CP77).
 
 Gráfico
 
