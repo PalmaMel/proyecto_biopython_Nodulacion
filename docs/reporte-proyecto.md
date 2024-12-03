@@ -105,22 +105,34 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 
 Respuesta: 
     Genes: 
-        - Phvul.001G142000.1
-        - Phvul.002G064200.1
-        - Phvul.003G103500.1
-        - Phvul.003G223600.1
-        - Phvul.010G031100.1
-        - Phvul.001G225000.1
-        - Phvul.005G083400.1
-        - Phvul.007G100800.1
-        - Phvul.008G139900.1
-        - Phvul.011G077900.1
+        - Phvul.001G142000.1 + Desarrollo embrionario
+        - Phvul.002G064200.1 + No hay datos
+        - Phvul.003G103500.1 + Regulador de transcripción específico de ADN (CCAAT_HAP3).
+        - Phvul.003G223600.1 + Actividad de factor de transcripción
+        - Phvul.010G031100.1 + Dominio MazG, pirofosfohidrolasa de nucleótidos
+        - Phvul.001G225000.1 - Nicotianamina sintasa, involucrada en la biosíntesis de nicotianamina.
+        - Phvul.005G083400.1 - Proteína inducida por aluminio.
+        - Phvul.007G100800.1 - No hay datos
+        - Phvul.008G139900.1 - No hay datos
+        - Phvul.011G077900.1 - Hidrolasa, actividad sobre compuestos O-glicosilados, metabolismo de carbohidratos.
 
-> B. ¿Cuál es el papel de la leghemoglobina en los meristemos apicales del tallo?
+El único gen con una conexión potencial con las vías dependientes de nitrógeno es Phvul.001G225000.1 (nicotianamina sintasa), ya que la nicotianamina participa en el transporte de hierro, un cofactor esencial para las nitrogenasas en la fijación de nitrógeno. Su represión podría tener un impacto indirecto negativo en estas vías. Lo cual serviría para explicar parcialmente lo observado en R. giardini, que es ineficiente en la nodulación.
+
+> B. ¿Cuál es el papel de la leghemoglobina en los meristemos apicales?
 Respuesta: 
+La leghemoglobina es una proteína característica de los nódulos fijadores de nitrógeno en plantas leguminosas, conocida por su capacidad para unir oxígeno; su papel principal está relacionado con la regulación de los niveles de oxígeno en los nódulos, protegiendo la nitrogenasa (enzima clave para la fijación de nitrógeno) de la inactivación por oxígeno.
+En la infección por la cepa eficiente R. tropici vemos que es altamente expresada, cuando en R. giardini pasa lo contrario. Esto solo nos deja vislumbrar el papel que tiene la leghemoglobina, y las consecuencias de su ausencia. Que provocan nodulacion defectuosa y crecimiento mas lento 
 
 > C. ¿Cómo afecta el envejecimiento prematuro a los tejidos infectados por R. giardini y qué relación tiene con la expresión de genes asociados a la senescencia celular? ¿Qué relación hay entre la infeccion por R. giardini tiene con la expresión de genes asociados a la senescencia celular? 
 Respuesta: 
+En el artículo mencionan que algo que se observó fue el envejecimiento prematuro en los tejidos infectados por R. giardini, así que decidimos analizar la relación que tenía esta con genes conocidos de senescencia.
+En los datos obtenidos podemos observar que los genes Phvul.004G014300.1 y Phvul.004G014300.2, ambos asociados a proteínas relacionadas con la senescencia celular (según su anotación con el dominio PF06911 "Senescence-associated protein"), muestran una expresión diferencial significativa en respuesta a la infección por Rhizobium giardini (NI).
+
+En R. tropici (NE), los genes relacionados con senescencia tienen niveles de expresión detectables (7 unidades para ambos genes). En R. giardini (NI), se observa una drástica reducción en la expresión: Para Phvul.004G014300.2, la expresión disminuye a 1 unidad (FoldChange = 2.81). Para Phvul.004G014300.1, la expresión es completamente suprimida (0 unidades, FoldChange = 3.81).
+
+La reducción en la expresión de genes asociados con senescencia puede estar relacionada con un mecanismo de respuesta adaptativa en la planta frente a R. giardini. Es posible que la infección por R. giardini induzca la modulación de genes de senescencia para evitar el envejecimiento prematuro de tejidos clave, permitiendo una mayor asignación de recursos metabólicos hacia la respuesta a la infección o el mantenimiento de la homeostasis.
+
+La senescencia celular suele estar ligada al reciclaje de nutrientes, incluidos compuestos nitrogenados, en etapas avanzadas del desarrollo de la planta. La supresión de genes de senescencia podría interferir con el reciclaje eficiente de nitrógeno en los tejidos infectados, impactando indirectamente las vías dependientes de nitrógeno y, posiblemente, el crecimiento vegetal bajo infección por R. giardini.
 
 ## Resultados
 
@@ -128,54 +140,51 @@ Respuesta:
 
 Archivo(s): `N5vsNE.xlsx`, `NEvsNI.xlsx`
 
-Algoritmo: 
+Algoritmo: Ejecutar un script para analizar los datos
 
 Gráfico:
-![alt text](../results/Grafica4.png)
-
-1. 
-
-Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
+![Fig1](../results/Grafica4.png)
+Solución:
 
 ```bash
 
+python .\src\differanaliza.py
 ```
 
 ### B. Analizar la expresión de leghemoglobina en el tallo para discernir su papel en los meristemos apicales
 
-Archivo(s):   Complete repository Nodulation.xlsx Hoja ST, Nod15, Nod21NI, Nod61, Nod7, Nod5
+Archivo(s): `N5vsNE.xlsx`, `NEvsNI.xlsx`
 
-Algoritmo: 
+Algoritmo: Ejecutar un script para analizar los datos 
 
 Gráfico
+![Fig2](../results/Grafica5.png)
 
-1. 
 
-Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
+Solución: 
 
 ```bash
+python .\src\leghemoglo.py
 
 ```
 
 ### C. Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular
 
-Archivo(s):     Complete repository Nodulation.xlsx Todas las hojas
+Archivo(s): `N5vsNE.xlsx`, `NEvsNI.xlsx`
 
-Algoritmo: 
+Algoritmo: Ejecutar un script para analizar los datos 
 
 Gráfico
-
-1. 
-
-Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
+![Fig3](../results/Grafica6.png)
+Solución: 
 
 ```bash
+python .\src\senescencia.py
 
 ```
 
 ## Análisis y Conclusiones
-
- <!-- Describir todo lo que descubriste en este análisis --> 
+La infección por *Rhizobium giardini* induce cambios significativos en la expresión génica de *Phaseolus vulgaris*, con impacto en vías metabólicas clave. Los genes expresados de forma única sugieren una posible relación con procesos de reciclaje de nitrógeno y la modulación de la senescencia celular. Mientras algunos genes como **Phvul.001G225000.1** y **Phvul.005G083400.1** pueden estar relacionados con el metabolismo de nitrógeno, otros como **Phvul.004G014300.1** y **Phvul.004G014300.2**, asociados a la senescencia, muestran una marcada supresión en su expresión bajo infección por *R. giardini*. Esto sugiere una posible estrategia de la planta para combatir un envejecimiento prematuro causado por la desnutrición y priorizar respuestas adaptativas. Además, la leghemoglobina, tal como describen estudios anteriores, desempeña un papel en los meristemos apicales al facilitar el manejo de oxígeno, manteniendo la homeostasis y promoviendo el desarrollo. Estos hallazgos destacan el impacto dañino de *R. giardini* en la fisiología vegetal.
 
 
 ## Referencias
