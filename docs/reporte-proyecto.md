@@ -44,7 +44,7 @@ El éxito del frijol como fuente agrícola sostenible depende en gran medida de 
 
 **Analizar comparativamente los genes que se expresan a consecuencia de la infección por R.Tropici y R.Giardini, y sus consecuencias en vías dependientes a Nitrogeno y el crecimiento**
 
-**Analizar la expresión de leghemoglobina en el tallo para discernir su papel en los meristemos apicales**
+**Analizar la expresión de leghemoglobina en el tallo para discernir su papel en las raíces**
 
 **Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular**
 
@@ -106,7 +106,7 @@ Los datos de entrada fueron descargados desde (<https://www.zhaolab.org/PvGEA/>)
 Respuesta: 
 
     Genes: 
-    
+
         - Phvul.001G142000.1
         - Phvul.002G064200.1
         - Phvul.003G103500.1
