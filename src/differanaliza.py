@@ -11,11 +11,15 @@ import plotly.express as px
 #=================================
 '''
 Description:
-El siguiente script se encarga de generar una grafica de dispersion interactiva de los niveles de expresión de
-los genes dentro de N5 que corresponden a 
+El siguiente script se encarga de generar 4 gráfico interactivos que responden a la primera parte de la pregunta: 
 
-los Nódulos de pre-fijación (fix+) recogidos 5 DAI(days after inoculation)
-vs NI que corresponde a los nódulos fix+ recogidos 21 DAI(days after inoculation)
+¿Cuáles son los genes que como consecuencia de la infección por R. giardini cambian su expresión,
+con respecto al control y R. tropici, y cuáles son las consecuencias de estos cambios en las vías 
+dependientes de nitrógeno y el crecimiento?
+
+Respuesta: 
+
+siendo el resultado final del script un archivo de Ids de genes en el directorio results.
 
 Se asume la sig organizacion del directorio de trabajo:
 ```
@@ -42,9 +46,14 @@ NEvsNI = pd.read_excel(file_NEvsNI, sheet_name="O'Rourke_AddFile15_NEvNI")
 N5vsNE = N5vsNE[['GeneID', 'NE', 'N5', 'FoldChange']]
 NEvsNI = NEvsNI[['GeneID', 'NE', 'NI', 'FoldChange']]
 
-# ===Creacion de Grafico===
-
-# Se crea unu gráfico de dispersion basado en el DataFrame
+# ===PART1===
+'''
+Gráfico 1: 
+Grafica de dispersion de los niveles de expresión de los genes dentro de N5 que corresponden a los Nódulos 
+de pre-fijación (fix+) recogidos 5 DAI(days after inoculation) vs NE que corresponden a los nódulos fix+ recogidos
+21 DAI(days after inoculation) a partir del dataframe N5vsNE
+'''
+# Se crea un gráfico de dispersion basado en el DataFrame
 # Utilizamos 'GeneID' como eje X y 'FoldChange' como eje Y.
 figN5vsNE = px.scatter(N5vsNE, 
                 x='GeneID', # Columna de identificadores de genes (eje X)
@@ -57,14 +66,27 @@ figN5vsNE.update_traces(marker=dict(size=5, color='purple')) # Aspectos graficos
 # Mostrar la grafica interactiva en el navegador 
 figN5vsNE.show()
 
+# ==========PART2============
+'''
+Gráfico 2: 
+Grafica de dispersion de los niveles de expresión de los genes dentro de NE que corresponden a los nódulos 
+fix+ recogidos 21 DAI(days after inoculation) vs NI que corresponde a los nódulos fix- recogidos 21 DAI(days
+after inoculation) a partir del dataframe NEvsNI
+'''
 figNEvsNI = px.scatter(NEvsNI,
-                    x='GeneID',
-                    y= 'FoldChange',
-                    title= 'Log2Fold Change: NE vs NI',
-                    labels={
+                    x='GeneID', # Columna de identificadores de genes (eje X)
+                    y= 'FoldChange', # Columna para el cambio de expresion (cambio de expresion)
+                    title= 'Comparacion de Patrones de Expresion: NE vs NI', # Titulo
+                    labels={ # Etiquetas para los ejes
                         'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
-figNEvsNI.show()
-
+# Mostrar la grafica interactiva en el navegador 
+figNEvsNI.show() 
+# ==========PART3============
+'''
+Gráfico 3: 
+Se combinan los dataframe anteriores y se genera una grafica de dispersión de la intersección
+entre sus niveles de expresión.
+'''
 combi = pd.merge(N5vsNE, NEvsNI, on= 'GeneID', suffixes=('_N5vsNE', '_NEvsNI'))
 combi = combi[['GeneID', 'FoldChange_N5vsNE', 'FoldChange_NEvsNI']]
 combi['FoldChange_N5vsNI'] = combi['FoldChange_N5vsNE'] + combi['FoldChange_NEvsNI']
@@ -77,9 +99,12 @@ figN5vsNI = px.scatter(N5vsNI,
                     title= 'Log2Fold Change: N5 vs NI',
                     labels={
                         'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
+# Mostrar la grafica interactiva en el navegador 
 figN5vsNI.show()
-
-
+# ==========PART4============
+'''
+Gráfico 4: 
+'''
 diff1 = combi[(combi['FoldChange_N5vsNE'] < 0) & (combi['FoldChange_N5vsNI'] > 0)]
 diff1['Categoría:'] = 'NE < 0, NI >0'
 diff2 =  combi[(combi['FoldChange_N5vsNE'] > 0) & (combi['FoldChange_N5vsNI'] < 0)]
@@ -100,6 +125,7 @@ fig_diff.add_shape(type="line", x0=min(combi["FoldChange_N5vsNE"]), x1=max(combi
             line=dict(color="Black", dash="dash"))
 fig_diff.show()
 
+# ======Archivo Final======
 # Pasar a un archivo las IDS
 diferenciada_copy = diferenciada.copy()
 # Extraer la columna 'GeneID' como una lista
