@@ -48,7 +48,6 @@ El éxito del frijol como fuente agrícola sostenible depende en gran medida de 
 
 **Analizar el efecto del envejecimiento prematuro en los tejidos y juzgar si estos afectan la senescencia celular**
 
-
 Este conocimiento podría ayudar a diseñar estrategias que mejoren la fijación de nitrógeno y mitiguen los efecto del crecimiento atrofiado, mejorando el rendimiento del frijol y reduciendo la dependencia de fertilizantes nitrogenados.
 
 ## Metodología
@@ -57,8 +56,6 @@ Se descargaron los datos del repositorio *Phaseolus vulgaris* gene expression at
 y publicado en el articulo: `An RNA-Seq based gene expression atlas of the common bean`
 
 Los datos de entrada consisten los patrones de expresión génica de 24 muestras únicas recogidas de siete tejidos distintos de *Phaseolus vulgaris* cv. negro jamapa: raíces, nódulos, hojas, tallos, flores, semillas y vainas. El archivo con los datos se encuentra en formato xlsx.
-
-
 
 ### A. Datos de Entrada 
 
@@ -158,16 +155,15 @@ Respuesta:
 > C. ¿Cómo afecta el envejecimiento prematuro a los tejidos infectados por R. giardini y qué relación tiene con la expresión de genes asociados a la senescencia celular? ¿Qué relación hay entre la infeccion por R. giardini tiene con la expresión de genes asociados a la senescencia celular? 
 Respuesta: 
 
-
 ## Resultados
 
 ### A. Analizar comparativamente los genes que se expresan a consecuencia de la infección por R.Tropici y R.Giardini, y sus consecuencias en vías dependientes a Nitrogeno y el crecimiento
 
-Archivo(s): Complete repository Nodulation.xlsx Hojas PvRE, PvRF, PvRI, Nod15, Nod21NI, Nod61, Nod7, Nod5, R5,RT
+Archivo(s): `N5vsNE.xlsx`, `NEvsNI.xlsx`
 
 Algoritmo: 
 
-Gráfico
+Gráfico:
 
 1. 
 
@@ -224,21 +220,6 @@ Algoritmo:
             Su silenciamiento provoca senescencia prematura en nódulos de Medicago truncatula.
         - bHLH2
             Inhibe la expresión de un gen de cisteína proteasa relacionado con la senescencia (CP77).
-
-Gráfico
-
-1. 
-
-Solución: Describir paso a paso la solución, incluyendo los comandos correspondientes
-
-```bash
-
-```
-### D. Comparar los datos transcriptomicos con los de otras especies para vislumbrar mas en los mecanismos detrás
-
-Archivo(s):     Complete repository Nodulation.xlsx Todas las hojas
-
-Algoritmo: 
 
 Gráfico
 

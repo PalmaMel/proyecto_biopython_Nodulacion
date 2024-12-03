@@ -11,15 +11,18 @@ import plotly.express as px
 #=================================
 '''
 Description:
-El siguiente script se encarga de generar 4 gráfico interactivos que responden a la primera parte de la pregunta: 
+El siguiente script se encarga responder a la primera parte de la pregunta: 
 
 ¿Cuáles son los genes que como consecuencia de la infección por R. giardini cambian su expresión,
 con respecto al control y R. tropici, y cuáles son las consecuencias de estos cambios en las vías 
 dependientes de nitrógeno y el crecimiento?
 
-Respuesta: 
+Genera 4 gráficos interactivos por medio de la libreria de `plotly.express` para responder sobre los efectos
+de la infección en la expresión génica. Al final, se crea un archivo con las IDs de los genes identificados.
 
-siendo el resultado final del script un archivo de Ids de genes en el directorio results.
+Salida:
+    Achivos:
+        Id_list.txt: Archivo de Ids de genes en el directorio results.
 
 Se asume la sig organizacion del directorio de trabajo:
 ```
@@ -46,9 +49,9 @@ NEvsNI = pd.read_excel(file_NEvsNI, sheet_name="O'Rourke_AddFile15_NEvNI")
 N5vsNE = N5vsNE[['GeneID', 'NE', 'N5', 'FoldChange']]
 NEvsNI = NEvsNI[['GeneID', 'NE', 'NI', 'FoldChange']]
 
-# ===PART1===
+# ================Grafico_1====================
+# =================N5_vs_NE===================
 '''
-Gráfico 1: 
 Grafica de dispersion de los niveles de expresión de los genes dentro de N5 que corresponden a los Nódulos 
 de pre-fijación (fix+) recogidos 5 DAI(days after inoculation) vs NE que corresponden a los nódulos fix+ recogidos
 21 DAI(days after inoculation) a partir del dataframe N5vsNE
@@ -66,9 +69,9 @@ figN5vsNE.update_traces(marker=dict(size=5, color='purple')) # Aspectos graficos
 # Mostrar la grafica interactiva en el navegador 
 figN5vsNE.show()
 
-# ==========PART2============
+# ================Grafico_2====================
+# =================NE_vs_NI===================
 '''
-Gráfico 2: 
 Grafica de dispersion de los niveles de expresión de los genes dentro de NE que corresponden a los nódulos 
 fix+ recogidos 21 DAI(days after inoculation) vs NI que corresponde a los nódulos fix- recogidos 21 DAI(days
 after inoculation) a partir del dataframe NEvsNI
@@ -81,18 +84,28 @@ figNEvsNI = px.scatter(NEvsNI,
                         'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
 # Mostrar la grafica interactiva en el navegador 
 figNEvsNI.show() 
-# ==========PART3============
+
+# ================Grafico_3====================
+# ===============Interseccion_de_N5_vs_NE_y_NE_vs_NI====================
 '''
-Gráfico 3: 
 Se combinan los dataframe anteriores y se genera una grafica de dispersión de la intersección
 entre sus niveles de expresión.
+
+Se busca encontrar los genes con expresion diferencial en ambas comparaciones: Busamos identificar patrones
+comunes o únicos en los cambios de expresión.
 '''
-combi = pd.merge(N5vsNE, NEvsNI, on= 'GeneID', suffixes=('_N5vsNE', '_NEvsNI'))
+# Se combinan los DataFrames N5vsNE y NEvsNI 
+# Se utilizan sufijos para lidiar con las columnas con mismo nombre 
+combi = pd.merge(N5vsNE, NEvsNI, on= 'GeneID', suffixes=('_N5vsNE', '_NEvsNI')) 
+# Para bsucar la exp diferencial solo ocupamos las columnas de ID y FoldChange`s
 combi = combi[['GeneID', 'FoldChange_N5vsNE', 'FoldChange_NEvsNI']]
+# Se calcula un Foldchange combiando
 combi['FoldChange_N5vsNI'] = combi['FoldChange_N5vsNE'] + combi['FoldChange_NEvsNI']
+
 
 N5vsNI = combi[['GeneID', 'FoldChange_N5vsNI']]
 
+# Creacion del grafico
 figN5vsNI = px.scatter(N5vsNI,
                     x='GeneID',
                     y= 'FoldChange_N5vsNI',
@@ -101,16 +114,30 @@ figN5vsNI = px.scatter(N5vsNI,
                         'GeneID': 'ID del Gen', 'FoldChange': 'Log2Fold Change'})
 # Mostrar la grafica interactiva en el navegador 
 figN5vsNI.show()
-# ==========PART4============
+
+# ========================Grafico_4============================
+# ==============Genes_Diferenciales_Destacados=================
 '''
-Gráfico 4: 
+Se identifican genes con expresiones diferenciales específicas:
+    - Categoría 1: Genes con menor expresión en NE y mayor en NI.
+        + NE FoldChange_N5vsNE < 0
+        + NI con un FoldChange_N5vsNI > 0
+
+    - Categoría 2: Genes con mayor expresión en NE y menor en NI.
+        + NI con un FoldChange_N5vsNI < 0
+        + NE con un FoldChange_N5vsNE > 0
 '''
+# Filtrado por las categorias mencionadas 
 diff1 = combi[(combi['FoldChange_N5vsNE'] < 0) & (combi['FoldChange_N5vsNI'] > 0)]
 diff1['Categoría:'] = 'NE < 0, NI >0'
 diff2 =  combi[(combi['FoldChange_N5vsNE'] > 0) & (combi['FoldChange_N5vsNI'] < 0)]
 diff2['Categoría:'] = 'NE > 0, NI <0'
+
+# Combinacion de Genes Filtrados
+# Obtener un conjunto de genes diferenciales 
 diferenciada = pd.concat([diff1,diff2])
 
+# Creacion del grafico
 fig_diff = px.scatter(diferenciada, 
                 x='FoldChange_N5vsNE', # Columna de identificadores de genes (eje X)
                 y='FoldChange_N5vsNI', # Columna para el cambio de expresion (cambio de expresion)
